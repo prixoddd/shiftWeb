@@ -1,0 +1,109 @@
+@import '@/styles/sass/global';
+
+.hero {
+    padding: 56px 0 20px 0;
+}
+
+.container {
+    @include container();
+}
+
+.content {
+    background-color: $color-white;
+    border-radius: 16px;
+    display: flex;
+    position: absolute;
+
+    .heroIntro {
+        height: 428px;
+        width: 712px;
+        border-radius: 16px 50px 50px 16px;
+        background-color: $color-white;
+        z-index: 2;
+
+        .textAndButton {
+            @include flex(column, center, flex-start, nowrap);
+            padding: 43px 52px 0 58px;
+
+            .title {
+                margin-bottom: 12px;
+            }
+
+            .text {
+                margin-top: 12px;
+                margin-bottom: 16px;
+            }
+
+            .orangeButton {
+                margin-top: 16px;
+                margin-bottom: 6px;
+            }
+
+            .arrow {
+                @include flex(row, center, center, nowrap);
+                gap: 16px;
+                margin-top: 6px;
+                margin-left: auto;
+                margin-bottom: 11px;
+
+                .box {
+                    @include flex(row, center, center, nowrap);
+                    height: 38px;
+                    width: 38px;
+                    background-color: $color-gray-background;
+                    border-radius: 4px;
+                }
+            }
+
+            .button {
+                margin-top: 11px;
+                @include flex(row, center, center, nowrap);
+                gap: 10px;
+                width: 172px;
+                height: 37px;
+                line-height: 140%;
+                padding: 8px 16px;
+                white-space: nowrap;
+            }
+        }
+    }
+
+    .image {
+        z-index: 1;
+        margin-left: -85px;
+        border-radius: 40px;
+        border: 21px solid $color-white;
+        display: block;
+        height: 428px;
+        width: 613px;
+        object-fit: cover;
+    }
+
+    .tireReplace {
+        position: absolute;
+        top: 46px;
+        right: -42px;
+        z-index: 2;
+    }
+
+    .callRequest {
+        position: absolute;
+        top: 103px;
+        right: -42px;
+        z-index: 2;
+    }
+
+    .body {
+        position: absolute;
+        bottom: -12px;
+        right: 76px;
+        z-index: 2;
+    }
+
+    .bodyColor {
+        position: absolute;
+        bottom: -12px;
+        right: -42px;
+        z-index: 2;
+    }
+}

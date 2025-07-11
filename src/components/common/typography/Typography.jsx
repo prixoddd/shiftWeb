@@ -14,6 +14,20 @@ const typographyVariants = [
     'semibold_38',
 ]
 
+/**
+ * @typedef {'regular_12' | 'regular_14' | 'regular_16' | 'regular_18' |
+ *           'medium_14_21' | 'medium_14_140' | 'medium_18' |
+ *           'semibold_15' | 'semibold_18' | 'semibold_38'} TypographyVariant
+ */
+
+/**
+ * @param {{
+ *   as?: string,
+ *   className?: string,
+ *   variant?: TypographyVariant,
+ *   children: React.ReactNode
+ * }} props
+ */
 export const Typography = ({ as, children, className, variant = 'regular_16', ...restProps }) => {
     const safeVariant = typographyVariants.includes(variant) ? variant : 'regular_16'
 
