@@ -13,23 +13,30 @@
   background-color: $color-white;
   border-radius: 16px;
   @include flex(row, space-between, center, nowrap);
-.logoAndSlogan {
-  @include flex(row, flex-start, center, nowrap);
-  .slogan {
-    white-space: nowrap;
-    padding-left: 18px;
-    color: $color-gray-content-tertiary;
+
+  .logoAndSlogan {
+    @include flex(row, flex-start, center, nowrap);
+
+    .slogan {
+      white-space: nowrap;
+      padding-left: 18px;
+      color: $color-gray-content-tertiary;
+    }
   }
-}
-  .buttons{
+
+  .buttons {
     width: fit-content;
+
     .button {
       white-space: nowrap;
+
       button:focus {
         outline: 2px solid blue;
       }
+
       @include button-reset
     }
+
     gap: 45px;
     @include flex(row, flex-end, center, nowrap);
   }
