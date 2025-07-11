@@ -3,12 +3,9 @@ module.exports = {
     env: {
         browser: true,
         es2021: true,
+        node: true,
     },
-    extends: [
-        'eslint:recommended',
-        'plugin:react/recommended',
-        'prettier', // отключает правила, конфликтующие с Prettier
-    ],
+    extends: ['eslint:recommended', 'plugin:react/recommended', 'prettier'],
     parserOptions: {
         ecmaVersion: 'latest',
         sourceType: 'module',
@@ -18,12 +15,17 @@ module.exports = {
     },
     plugins: ['react', 'react-hooks'],
     rules: {
-        // свои правила (можешь добавлять по вкусу)
-        'react/react-in-jsx-scope': 'off', // если используешь Vite, React 17+
+        'react/react-in-jsx-scope': 'off',
     },
     settings: {
         react: {
             version: 'detect',
+        },
+        'import/resolver': {
+            alias: {
+                map: [['@', './src']],
+                extensions: ['.js', '.jsx'],
+            },
         },
     },
 }
