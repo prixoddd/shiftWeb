@@ -12,12 +12,13 @@ const typographyVariants = [
     'semibold_15',
     'semibold_18',
     'semibold_38',
+    'semibold_36',
 ]
 
 /**
  * @typedef {'regular_12' | 'regular_14' | 'regular_16' | 'regular_18' |
  *           'medium_14_21' | 'medium_14_140' | 'medium_18' |
- *           'semibold_15' | 'semibold_18' | 'semibold_38'} TypographyVariant
+ *           'semibold_15' | 'semibold_18' | 'semibold_38' | 'semibold_36'} TypographyVariant
  */
 
 /**

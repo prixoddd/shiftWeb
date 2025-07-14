@@ -1,0 +1,58 @@
+@import '@/styles/sass/global';
+
+.hero {
+    padding: 19px 0 56px 0;
+}
+
+.container {
+    @include container();
+}
+
+.content {
+    background-color: $color-white;
+    border-radius: 16px;
+    padding: 36px 36px 32px 56px;
+    @include flex(row, space-between, flex-start, nowrap);
+
+    .textAndAccordion {
+        width: 496px;
+        //gap: 54px;
+        @include flex(column, space-between, flex-start, nowrap);
+
+        .textAndButtons {
+            margin-top: 66px;
+
+            .buttons {
+                display: flex;
+                gap: 16px;
+                margin-top: 20px;
+            }
+        }
+
+        .text {
+            gap: 8px;
+            padding-bottom: 54px;
+        }
+    }
+
+    .screenshots {
+        width: 582px;
+        height: 692px;
+        background-color: $color-gray-border-primary;
+        border-radius: 16px;
+        position: relative;
+
+        .garage1 {
+            position: absolute;
+            bottom: -10px;
+            right: 28px;
+        }
+
+        .garage2 {
+            position: absolute;
+
+            top: 30px;
+            left: 28px;
+        }
+    }
+}

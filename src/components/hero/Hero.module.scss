@@ -1,7 +1,7 @@
 @import '@/styles/sass/global';
 
 .hero {
-    padding: 56px 0 20px 0;
+    padding: 19px 0 56px 0;
 }
 
 .container {
@@ -12,7 +12,7 @@
     background-color: $color-white;
     border-radius: 16px;
     display: flex;
-    position: absolute;
+    position: relative;
 
     .heroIntro {
         height: 428px;

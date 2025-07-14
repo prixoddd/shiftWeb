@@ -8,7 +8,7 @@ import s from './button.module.scss'
  *   type?: 'button' | 'submit' | 'reset',
  *   onClick?: () => void,
  *   className?: string,
- *   variant?: 'primary' | 'secondary' | 'ghost',
+ *   variant?: 'primary' | 'secondary' | 'ghost' | 'logo',
  *   disabled?: boolean,
  *   as?: 'button' | 'a',
  *   href?: string,
