@@ -1,0 +1,63 @@
+@import '@/styles/sass/global';
+
+.hero {
+    padding: 72px 0 128px 0;
+}
+
+.container {
+    @include container();
+}
+
+.content {
+    @include flex(row, space-between, flex-start, nowrap);
+
+    .imageAndUsers {
+        position: relative;
+
+        .imageWrapper {
+            position: relative;
+            width: 606px;
+            height: 334px;
+            border-radius: 40px;
+            overflow: hidden;
+            border: 20px solid $color-white;
+
+            > img {
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+                object-position: left bottom;
+                transform: scale(1.2);
+                transform-origin: left bottom;
+                filter: brightness(1.4) contrast(0.8) sepia(0.1);
+            }
+        }
+
+        .carts {
+            position: absolute;
+            bottom: -59px;
+            left: 60px;
+            @include flex(row, center, flex-start, nowrap);
+            gap: 26px;
+        }
+    }
+
+    .textAndButton {
+        @include flex(column, center, flex-start, nowrap);
+        gap: 16px;
+        width: 564px;
+
+        .button {
+            margin-top: 60px;
+            @include flex(row, center, center, nowrap);
+            margin-left: auto;
+            gap: 10px;
+            //width: 258px;
+            height: 40px;
+            //line-height: 140%;
+            //padding: 0 16px 0 16px;
+            white-space: nowrap;
+        }
+    }
+}
