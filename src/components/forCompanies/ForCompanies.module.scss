@@ -1,0 +1,92 @@
+@import '@/styles/sass/global';
+
+.hero {
+    padding: 48px 0 32px 0;
+}
+
+.container {
+    @include container();
+}
+
+.content {
+    background-color: $color-white;
+    border-radius: 16px;
+    padding: 36px 56px 36px 36px;
+    @include flex(row, space-between, flex-start, nowrap);
+
+    .screenshots {
+        width: 582px;
+        height: 692px;
+        background-color: $color-gray-border-primary;
+        border-radius: 16px;
+        position: relative;
+        padding-top: 27px;
+        //padding-left: 10px;
+        z-index: 2;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+
+        .dealsImageWrapper {
+            width: 514px;
+            height: 362px;
+            overflow: hidden;
+            position: relative;
+            border: 10px solid $color-white;
+            border-left: 0;
+            border-radius: 0 20px 20px 0;
+
+            .deals {
+                position: absolute;
+                top: -15px;
+                right: -5px;
+            }
+        }
+
+        .listImageWrapper {
+            width: 514px;
+            height: 272px;
+            overflow: hidden;
+            position: relative;
+            border: 10px solid $color-white;
+            border-left: 0;
+            border-bottom: 0;
+            border-radius: 0 20px 0 0;
+
+            .list {
+                position: absolute;
+                top: -10px;
+                right: -5px;
+                z-index: 1;
+            }
+        }
+    }
+
+    .textAndAccordion {
+        width: 496px;
+        //gap: 54px;
+        @include flex(column, space-between, flex-start, nowrap);
+
+        .textAndButtons {
+            margin-top: 66px;
+            width: 100%;
+
+            .buttons {
+                display: flex;
+                gap: 16px;
+                margin-top: 20px;
+
+                > button {
+                    font-size: 18px;
+                    color: $color-white;
+                    width: 100%;
+                }
+            }
+        }
+
+        .text {
+            gap: 8px;
+            padding-bottom: 54px;
+        }
+    }
+}

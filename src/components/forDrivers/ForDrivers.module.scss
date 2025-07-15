@@ -21,9 +21,11 @@
 
         .textAndButtons {
             margin-top: 66px;
+            width: 100%;
 
             .buttons {
                 display: flex;
+                justify-content: space-between;
                 gap: 16px;
                 margin-top: 20px;
             }
