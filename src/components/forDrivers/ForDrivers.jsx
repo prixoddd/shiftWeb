@@ -8,6 +8,32 @@ import { ReactComponent as Appstore } from '@/assets/icons/appStore.svg'
 import { ShiftAccordion } from '@/components/accordion/Accordion.jsx'
 import { Button } from '@/components/common/button/Button.jsx'
 
+const accordionItems = [
+    {
+        title: 'Appointment scheduling',
+        content:
+            'Book appointments with your preferred service center directly through the app. Enjoy the convenience of selecting dates, times, and specific services with just a few taps.',
+    },
+    {
+        title: 'Your car history',
+        content:
+            'Keep a detailed history of every service, inspection, and repair. Everything stays connected to your car automatically.',
+    },
+    {
+        title: 'All cars in one garage',
+        content: 'Manage multiple vehicles in one place. Perfect for families or small business fleets.',
+    },
+    {
+        title: 'Exclusive partner deals',
+        content: 'Access special offers and discounts from trusted service providers right inside the app.',
+    },
+    {
+        title: 'Real-time service updates',
+        content:
+            'Get instant notifications when your car is taken in and when it’s ready for pickup. Stay informed without the need for calls.',
+    },
+]
+
 export const ForDrivers = () => {
     return (
         <section className={s.hero}>
@@ -21,7 +47,7 @@ export const ForDrivers = () => {
                             </Typography>
                         </div>
 
-                        <ShiftAccordion />
+                        <ShiftAccordion items={accordionItems} />
                         <div className={s.textAndButtons}>
                             <Typography variant={'regular_14'}>
                                 Download Shift today and experience the future of car maintenance!

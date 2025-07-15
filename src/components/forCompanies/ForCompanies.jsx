@@ -4,6 +4,29 @@ import { Typography } from '@/components/common/typography/Typography.jsx'
 import { ShiftAccordion } from '@/components/accordion/Accordion.jsx'
 import { Button } from '@/components/common/button/Button.jsx'
 
+const accordionItems = [
+    {
+        title: 'Customer management ',
+        content: 'Easily manage profiles, track service history, and view preferences — all in one dashboard.',
+    },
+    {
+        title: 'Appointment scheduling ',
+        content: 'Accept bookings online, reduce no-shows, and optimize your schedule with calendar view.',
+    },
+    {
+        title: 'Service management',
+        content: 'Maintain a comprehensive service history for each vehicle, including attached photos and invoices.',
+    },
+    {
+        title: 'Marketing tools',
+        content: 'Highlight seasonal offers, promote services, and stay in touch with loyal clients.',
+    },
+    {
+        title: 'Service management',
+        content: 'Maintain a comprehensive service history for each vehicle, including attached photos and invoices.',
+    },
+]
+
 export const ForCompanies = () => {
     return (
         <section className={s.hero}>
@@ -36,14 +59,14 @@ export const ForCompanies = () => {
                             <Typography variant={'semibold_36'}>For companies</Typography>
                             <Typography variant={'regular_18'}>
                                 Our app connects you with a wider customer base, simplifies appointment scheduling, and
-                                enhances customer engagement{' '}
+                                enhances customer engagement
                             </Typography>
                         </div>
 
-                        <ShiftAccordion />
+                        <ShiftAccordion items={accordionItems} />
                         <div className={s.textAndButtons}>
                             <Typography variant={'regular_14'}>
-                                Partner with AutoCare Pro today and drive your business forward!
+                                Partner with Shift and grow your business with smart, simple tools.
                             </Typography>
                             <div className={s.buttons}>
                                 <Button variant={'logo'}>Register</Button>
