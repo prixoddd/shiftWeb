@@ -3,6 +3,7 @@ import { ForDrivers } from '@/components/forDrivers/ForDrivers.jsx'
 import { Hero } from '@/components/hero/Hero.jsx'
 import { AboutUs } from '@/components/aboutUs/AboutUs.jsx'
 import { ForCompanies } from '@/components/forCompanies/ForCompanies.jsx'
+import ContactUs from '@/components/contactUs/ContactUs.jsx'
 
 function App() {
     return (
@@ -12,6 +13,7 @@ function App() {
             <AboutUs />
             <ForDrivers />
             <ForCompanies />
+            <ContactUs />
         </>
     )
 }

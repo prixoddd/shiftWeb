@@ -38,7 +38,12 @@ export const Hero = () => {
                             </Button>
                         </div>
                     </div>
-                    <img src="/src/assets/images/blackBmw.jpg" alt="Black Bmw in a showroom" className={s.image} />
+                    <img
+                        src="/src/assets/images/blackBmw@1x.webp"
+                        srcSet="/src/assets/images/blackBmw@2x.webp 2x"
+                        alt="Black Bmw in a showroom"
+                        className={s.image}
+                    />
                     <TireReplace className={s.tireReplace} />
                     <CallRequest className={s.callRequest} />
                     <Body className={s.body} />

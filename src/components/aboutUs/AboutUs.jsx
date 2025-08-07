@@ -12,7 +12,13 @@ export const AboutUs = () => {
                 <div className={s.content}>
                     <div className={s.imageAndUsers}>
                         <div className={s.imageWrapper}>
-                            <img src="/src/assets/images/whiteDodge.jpg" alt="White Dodge in a showroom" />
+                            <img
+                                src="/src/assets/images/whiteDodge@1x.webp"
+                                srcSet="/src/assets/images/whiteDodge@2x.webp"
+                                alt="White Dodge in a showroom"
+                                width="512"
+                                height="303"
+                            />
                         </div>
                         <div className={s.carts}>
                             <StatCart text={'1500+ users'} />

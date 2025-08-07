@@ -36,7 +36,7 @@ export const ForCompanies = () => {
                         <div className={s.dealsImageWrapper}>
                             <img
                                 src="/src/assets/images/deals@1x.webp"
-                                srcSet="/src/assets/images/deals@2x.webp"
+                                srcSet="/src/assets/images/deals@2x.webp 2x"
                                 alt="App interface showing active car maintenance deals"
                                 width="622"
                                 height="358"
@@ -46,7 +46,7 @@ export const ForCompanies = () => {
                         <div className={s.listImageWrapper}>
                             <img
                                 src="/src/assets/images/list@1x.webp"
-                                srcSet="/src/assets/images/list@2x.webp"
+                                srcSet="/src/assets/images/list@2x.webp 2x"
                                 alt="App interface showing client's active service bookings"
                                 width="622"
                                 height="357"
