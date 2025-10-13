@@ -1,0 +1,95 @@
+@import '@/styles/sass/global';
+
+.hero {
+    padding: 28px 0 0 0;
+}
+
+.container {
+    @include container();
+}
+.content {
+    padding-top: 56px;
+    padding-bottom: 56px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    .logoAndButtonsContainer {
+        display: flex;
+    }
+    .logoAndText {
+        p {
+            margin-top: 20px;
+            font-weight: 400;
+            font-size: 12px;
+            line-height: 140%;
+            letter-spacing: 0;
+            vertical-align: middle;
+        }
+    }
+    .buttons {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        gap: 8px;
+        margin-left: 56px;
+        height: 98px;
+    }
+    .socialsContainer {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-end;
+        p {
+            font-size: 14px;
+            font-weight: 400;
+            line-height: 21px;
+        }
+        .socials {
+            margin-top: 10px;
+            display: flex;
+            gap: 8px;
+            a {
+                display: flex;
+                align-items: center;
+                justify-content: center;
+                width: 46px;
+                height: 46px;
+                border-radius: 50%;
+                background-color: $color-white;
+            }
+        }
+    }
+}
+
+.links {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 16px 56px;
+    border-radius: 6px;
+
+    @media (max-width: 640px) {
+        grid-template-columns: 1fr;
+    }
+}
+
+.linksCol {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+.linksItem + .linksItem {
+    margin-top: 16px;
+}
+
+.linksLink {
+    display: inline-block;
+    text-decoration: none;
+    color: $color-gray-main;
+    line-height: 21px;
+    font-size: 14px;
+
+    &:hover,
+    &:focus {
+        text-decoration: underline;
+    }
+}

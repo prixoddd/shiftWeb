@@ -17,11 +17,13 @@ export const Hero = () => {
                     <div className={s.heroIntro}>
                         <div className={s.textAndButton}>
                             <Typography className={s.title} variant={'semibold_38'}>
-                                Simplify your car care: the smart garage app for all your maintenance and repair needs
+                                Shift — one platform for drivers and car care professionals
                             </Typography>
                             <Typography className={s.text} variant={'regular_16'}>
-                                Our innovative app offers a comprehensive suite of features tailored to meet all your
-                                car service and repair needs, making car care effortless and efficient.
+                                Book services. Manage your car. Grow your business. All in one place. Shift connects
+                                drivers and automotive businesses in one seamless system. Drivers can easily book
+                                services, track their car's history, and get real-time updates. Service providers accept
+                                bookings, document work, and keep customers happy — all through our platform.
                             </Typography>
                             <Button className={s.orangeButton} variant={'primary'}>
                                 <Typography variant={'semibold_15'}>Try it now</Typography>

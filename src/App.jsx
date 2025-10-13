@@ -4,6 +4,7 @@ import { Hero } from '@/components/hero/Hero.jsx'
 import { AboutUs } from '@/components/aboutUs/AboutUs.jsx'
 import { ForCompanies } from '@/components/forCompanies/ForCompanies.jsx'
 import ContactUs from '@/components/contactUs/ContactUs.jsx'
+import { Footer } from '@/components/footer/Footer.jsx'
 
 function App() {
     return (
@@ -14,6 +15,7 @@ function App() {
             <ForDrivers />
             <ForCompanies />
             <ContactUs />
+            <Footer />
         </>
     )
 }

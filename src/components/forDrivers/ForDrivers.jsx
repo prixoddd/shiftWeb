@@ -7,6 +7,7 @@ import { ReactComponent as GooglePlay } from '@/assets/icons/googlePlay.svg'
 import { ReactComponent as Appstore } from '@/assets/icons/appStore.svg'
 import { ShiftAccordion } from '@/components/accordion/Accordion.jsx'
 import { Button } from '@/components/common/button/Button.jsx'
+import { Element as ScrollElement } from 'react-scroll'
 
 const accordionItems = [
     {
@@ -36,38 +37,41 @@ const accordionItems = [
 
 export const ForDrivers = () => {
     return (
-        <section className={s.hero}>
-            <div className={s.container}>
-                <div className={s.content}>
-                    <div className={s.textAndAccordion}>
-                        <div className={s.text}>
-                            <Typography variant={'semibold_36'}>For drivers</Typography>
-                            <Typography variant={'regular_18'}>
-                                Experience effortless car maintenance with our all-in-one app
-                            </Typography>
-                        </div>
+        <ScrollElement name="ForDrivers">
+            <section className={s.hero}>
+                <div className={s.container}>
+                    <div className={s.content}>
+                        <div className={s.textAndAccordion}>
+                            <div className={s.text}>
+                                <Typography variant={'semibold_36'}>For drivers</Typography>
+                                <Typography variant={'regular_18'}>
+                                    Built by drivers — for drivers <br />
+                                    <br /> No more calling workshops or keeping paper service records.
+                                </Typography>
+                            </div>
 
-                        <ShiftAccordion items={accordionItems} />
-                        <div className={s.textAndButtons}>
-                            <Typography variant={'regular_14'}>
-                                Download Shift today and experience the future of car maintenance!
-                            </Typography>
-                            <div className={s.buttons}>
-                                <Button variant={'logo'}>
-                                    <GooglePlay />
-                                </Button>
-                                <Button variant={'logo'}>
-                                    <Appstore />
-                                </Button>
+                            <ShiftAccordion items={accordionItems} />
+                            <div className={s.textAndButtons}>
+                                <Typography variant={'regular_14'}>
+                                    Download Shift today and experience the future of car maintenance!
+                                </Typography>
+                                <div className={s.buttons}>
+                                    <Button variant={'logo'}>
+                                        <GooglePlay />
+                                    </Button>
+                                    <Button variant={'logo'}>
+                                        <Appstore width="108" height="29" />
+                                    </Button>
+                                </div>
                             </div>
                         </div>
-                    </div>
-                    <div className={s.screenshots}>
-                        <Garage1 className={s.garage1} />
-                        <Garage2 className={s.garage2} />
+                        <div className={s.screenshots}>
+                            <Garage1 className={s.garage1} />
+                            <Garage2 className={s.garage2} />
+                        </div>
                     </div>
                 </div>
-            </div>
-        </section>
+            </section>
+        </ScrollElement>
     )
 }
