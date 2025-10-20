@@ -1,13 +1,14 @@
 'use client'
 import React from 'react'
 import s from './AboutUs.module.scss'
-import { StatCart } from '@/components/common/statCart/StatCart.jsx'
 import { Typography } from '@/components/common/typography/Typography.jsx'
 import { Button } from '@/components/common/button/Button.jsx'
 import { ReactComponent as Tag } from '@/assets/icons/tag.svg'
 import { Element as ScrollElement } from 'react-scroll'
+import { StatCart } from '@/components/common/statCart/StatCart.jsx'
 
 export const AboutUs = () => {
+    const base = import.meta.env.BASE_URL
     return (
         <ScrollElement name="AboutUs">
             <section className={s.hero}>
@@ -16,8 +17,8 @@ export const AboutUs = () => {
                         <div className={s.imageAndUsers}>
                             <div className={s.imageWrapper}>
                                 <img
-                                    src="/src/assets/images/whiteDodge@1x.webp"
-                                    srcSet="/src/assets/images/whiteDodge@2x.webp"
+                                    src={`${base}images/whiteDodge@1x.webp`}
+                                    srcSet={`${base}images/whiteDodge@2x.webp 2x`}
                                     alt="White Dodge in a showroom"
                                     width="512"
                                     height="303"

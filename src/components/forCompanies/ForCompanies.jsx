@@ -25,6 +25,7 @@ const accordionItems = [
 ]
 
 export const ForCompanies = () => {
+    const base = import.meta.env.BASE_URL
     return (
         <ScrollElement name="ForCompanies">
             <section className={s.hero}>
@@ -33,8 +34,8 @@ export const ForCompanies = () => {
                         <div className={s.screenshots}>
                             <div className={s.dealsImageWrapper}>
                                 <img
-                                    src="/src/assets/images/deals@1x.webp"
-                                    srcSet="/src/assets/images/deals@2x.webp 2x"
+                                    src={`${base}images/deals@1x.webp`}
+                                    srcSet={`${base}images/deals@2x.webp 2x`}
                                     alt="App interface showing active car maintenance deals"
                                     width="622"
                                     height="358"
@@ -43,8 +44,8 @@ export const ForCompanies = () => {
                             </div>
                             <div className={s.listImageWrapper}>
                                 <img
-                                    src="/src/assets/images/list@1x.webp"
-                                    srcSet="/src/assets/images/list@2x.webp 2x"
+                                    src={`${base}images/list@1x.webp`}
+                                    srcSet={`${base}images/list@2x.webp 2x`}
                                     alt="App interface showing client's active service bookings"
                                     width="622"
                                     height="357"

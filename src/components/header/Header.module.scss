@@ -40,4 +40,12 @@
         gap: 45px;
         @include flex(row, flex-end, center, nowrap);
     }
+
+    @media screen and (max-width: 480px) {
+        justify-content: center;
+        .slogan,
+        .buttons {
+            display: none;
+        }
+    }
 }

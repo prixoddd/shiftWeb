@@ -10,6 +10,7 @@ import { ReactComponent as Body } from '@/assets/icons/body.svg'
 import { ReactComponent as BodyColor } from '@/assets/icons/bodyColor.svg'
 
 export const Hero = () => {
+    const base = import.meta.env.BASE_URL
     return (
         <section className={s.hero}>
             <div className={s.container}>
@@ -41,8 +42,8 @@ export const Hero = () => {
                         </div>
                     </div>
                     <img
-                        src="/src/assets/images/blackBmw@1x.webp"
-                        srcSet="/src/assets/images/blackBmw@2x.webp 2x"
+                        src={`${base}images/blackBmw@1x.webp`}
+                        srcSet={`${base}images/blackBmw@2x.webp 2x`}
                         alt="Black Bmw in a showroom"
                         className={s.image}
                     />

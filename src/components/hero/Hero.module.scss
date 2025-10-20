@@ -76,7 +76,7 @@
         border: 21px solid $color-white;
         display: block;
         height: 428px;
-        width: 613px;
+        max-width: 613px;
         object-fit: cover;
     }
 
@@ -106,5 +106,22 @@
         bottom: -12px;
         right: -42px;
         z-index: 2;
+    }
+    @media screen and (max-width: 480px) {
+        flex-direction: column;
+        .tireReplace,
+        .callRequest,
+        .body,
+        .heroIntro .textAndButton .arrow,
+        .heroIntro .textAndButton .button,
+        .bodyColor {
+            display: none;
+        }
+        .image {
+            border: 0;
+        }
+        .heroIntro {
+            height: auto;
+        }
     }
 }
