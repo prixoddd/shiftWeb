@@ -1,10 +1,14 @@
-@import '@/styles/sass/global';
+@import '../../styles/sass/global';
 
 .hero {
-    padding: 24px 0 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 50;
+    width: 100%;
 }
 
 .container {
+    padding: 24px 0 20px 0;
     @include container();
 }
 
@@ -25,26 +29,17 @@
     }
 
     .buttons {
-        width: fit-content;
-
-        .button {
-            white-space: nowrap;
-
-            button:focus {
-                outline: 2px solid blue;
-            }
-
-            @include button-reset;
-        }
-
-        gap: 45px;
-        @include flex(row, flex-end, center, nowrap);
     }
+}
 
-    @media screen and (max-width: 480px) {
-        justify-content: center;
-        .slogan,
-        .buttons {
+@media screen and (max-width: 1024px) {
+    .hero {
+        padding: 0 0 20px 0;
+    }
+    .content {
+        padding: 22px 21px;
+
+        .slogan {
             display: none;
         }
     }

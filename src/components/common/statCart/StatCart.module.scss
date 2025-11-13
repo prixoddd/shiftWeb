@@ -1,23 +1,26 @@
-@import '@/styles/sass/global';
+@import '../../../styles/sass/global';
 
 .container {
-    width: 148px;
-    height: 118px;
+    position: relative;
+    width: 140px;
+    height: 110px;
     background: $color-gray-main;
     border: 4px solid $color-white;
     border-radius: 10px;
     @include flex(column, space-between, center, nowrap);
     flex-shrink: 0;
+    overflow: hidden;
 
     .avatar {
         padding: 8px 0 16px 0;
     }
 
     .textContainer {
-        width: 140px;
+        position: absolute;
+        bottom: 0;
+        width: 100%;
         height: 53px;
-        border-radius: 8px 8px 0 0;
-
+        border-radius: 10px 10px 0 0;
         background: $color-white;
         @include flex(column, center, center, nowrap);
         flex-shrink: 0;
@@ -26,6 +29,73 @@
             font-weight: 600;
             font-size: 18px;
             line-height: 140%;
+        }
+    }
+}
+
+@media screen and (max-width: 1439px) and (min-width: 1024px) {
+    .container {
+        width: 105px;
+        height: 82.5px;
+
+        .textContainer {
+            height: 32px;
+
+            > h3 {
+                font-size: 16px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .container {
+        width: 126px;
+        height: 99px;
+
+        .textContainer {
+            height: 48px;
+
+            > h3 {
+                font-size: 16px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .container {
+        width: 110px;
+        height: 90px;
+
+        .textContainer {
+            height: 44px;
+
+            > h3 {
+                font-size: 15px;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 576px) {
+    .container {
+        width: 70px;
+        height: 66px;
+        border-width: 3px;
+
+        .avatar {
+            transform: scale(0.8);
+            padding: 3px 0 0 0;
+        }
+
+        .textContainer {
+            height: 26px;
+            border-radius: 5px 5px 0 0;
+
+            > h3 {
+                font-size: 10px;
+            }
         }
     }
 }

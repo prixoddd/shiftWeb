@@ -13,22 +13,20 @@ export const Footer = () => {
         <section className={s.hero}>
             <div className={s.container}>
                 <div className={s.content}>
-                    <div className={s.logoAndButtonsContainer}>
-                        <div className={s.logoAndText}>
-                            <LogoIcon />
-                            <p>© 2022. All rights reserved</p>
-                        </div>
-                        <div className={s.buttons}>
-                            <Button variant={'logo'}>
-                                <GooglePlay />
-                            </Button>
-                            <Button variant={'logo'}>
-                                <Appstore />
-                            </Button>
-                        </div>
+                    <div className={s.logoAndText}>
+                        <LogoIcon />
+                        <p>© 2022. All rights reserved</p>
                     </div>
-                    <nav className={s.links}>
-                        <ul className={s.linksCol}>
+                    <div className={s.buttons}>
+                        <Button variant={'logo'}>
+                            <GooglePlay />
+                        </Button>
+                        <Button variant={'logo'}>
+                            <Appstore />
+                        </Button>
+                    </div>
+                    <nav className={s.firstLinks}>
+                        <ul>
                             <li className={s.linksItem}>
                                 <a className={s.linksLink} href="#">
                                     For users
@@ -45,7 +43,8 @@ export const Footer = () => {
                                 </a>
                             </li>
                         </ul>
-
+                    </nav>
+                    <nav className={s.secondLinks}>
                         <ul className={s.linksCol}>
                             <li className={s.linksItem}>
                                 <a className={s.linksLink} href="#">

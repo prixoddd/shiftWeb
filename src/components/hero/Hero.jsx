@@ -3,7 +3,6 @@ import s from '@/components/hero/Hero.module.scss'
 import { Typography } from '@/components/common/typography/Typography.jsx'
 import { Button } from '@/components/common/button/Button.jsx'
 import { ReactComponent as ArrowDown } from '@/assets/icons/arrowDown.svg'
-import { ReactComponent as ArrowUp } from '@/assets/icons/arrowUp.svg'
 import { ReactComponent as TireReplace } from '@/assets/icons/tireReplace.svg'
 import { ReactComponent as CallRequest } from '@/assets/icons/callRequest.svg'
 import { ReactComponent as Body } from '@/assets/icons/body.svg'
@@ -29,28 +28,29 @@ export const Hero = () => {
                             <Button className={s.orangeButton} variant={'primary'}>
                                 <Typography variant={'semibold_15'}>Try it now</Typography>
                             </Button>
-                            <div className={s.arrow}>
-                                <Typography variant={'regular_16'}>Lorem Ipsumis simply</Typography>
-                                <div className={s.box}>
-                                    <ArrowUp />
-                                </div>
-                            </div>
+
                             <Button className={s.button} variant={'secondary'}>
                                 <Typography variant={'semibold_15'}>Find out more</Typography>
                                 <ArrowDown />
                             </Button>
                         </div>
                     </div>
-                    <img
-                        src={`${base}images/blackBmw@1x.webp`}
-                        srcSet={`${base}images/blackBmw@2x.webp 2x`}
-                        alt="Black Bmw in a showroom"
-                        className={s.image}
-                    />
-                    <TireReplace className={s.tireReplace} />
-                    <CallRequest className={s.callRequest} />
-                    <Body className={s.body} />
-                    <BodyColor className={s.bodyColor} />
+                    <div className={s.imageWrapper}>
+                        <img
+                            src={`${base}images/blackBmw.webp`}
+                            srcSet={`${base}images/blackBmw.webp 2x`}
+                            alt="Black Bmw in a showroom"
+                            className={s.image}
+                        />
+                        <div className={s.topCardsGroup}>
+                            <TireReplace className={s.tireReplace} />
+                            <CallRequest className={s.callRequest} />
+                        </div>
+                        <div className={s.cardsGroup}>
+                            <Body className={s.body} />
+                            <BodyColor className={s.bodyColor} />
+                        </div>
+                    </div>
                 </div>
             </div>
         </section>

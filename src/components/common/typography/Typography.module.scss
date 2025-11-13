@@ -1,4 +1,4 @@
-@import '@/styles/sass/global';
+@import '../../../styles/sass/global';
 
 .typography {
     font-family: 'Montserrat', sans-serif;
@@ -14,18 +14,27 @@
     font-size: 14px;
     font-weight: 400;
     line-height: 100%;
+    @media screen and (max-width: 1024px) {
+        font-size: 12px;
+    }
 }
 
 .regular_16 {
     font-size: 16px;
     font-weight: 400;
     line-height: 150%;
+    @media screen and (max-width: 1024px) {
+        font-size: 14px;
+    }
 }
 
 .regular_18 {
     font-size: 18px;
     font-weight: 400;
     line-height: 122%;
+    @media screen and (max-width: 1024px) {
+        font-size: 14px;
+    }
 }
 
 .medium_14_21 {
@@ -50,6 +59,9 @@
     font-size: 15px;
     font-weight: 600;
     line-height: 100%;
+    @media screen and (max-width: 768px) {
+        font-size: 14px;
+    }
 }
 
 .semibold_18 {
@@ -62,10 +74,22 @@
     font-size: 38px;
     font-weight: 600;
     line-height: 110%;
+    @media screen and (max-width: 1024px) {
+        font-size: 30px;
+    }
+    @media screen and (max-width: 768px) {
+        font-size: 24px;
+    }
 }
 
 .semibold_36 {
     font-size: 36px;
     font-weight: 600;
     line-height: 180%;
+    @media screen and (max-width: 1024px) {
+        font-size: 28px;
+    }
+    @media screen and (max-width: 768px) {
+        font-size: 21px;
+    }
 }

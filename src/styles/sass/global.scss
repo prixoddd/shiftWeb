@@ -33,7 +33,6 @@ body::before {
 body::after {
     content: '';
     position: absolute;
-    //top: calc(140px + 1450px + 924px);
     bottom: 0;
     mix-blend-mode: soft-light;
     left: 0;

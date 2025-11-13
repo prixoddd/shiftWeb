@@ -3,11 +3,10 @@ import React from 'react'
 import s from './Header.module.scss'
 import { ReactComponent as LogoIcon } from '@/assets/icons/logo.svg'
 import { Typography } from '@/components/common/typography/Typography.jsx'
-import { useSmoothScroll } from '@/hooks/useSmoothScroll.jsx'
+import { Nav } from '@/components/header/nav/Nav.jsx'
+import { BurgerNav } from '@/components/header/burgerNav/BurgerNav.jsx'
 
 export const Header = () => {
-    const { scrollTo } = useSmoothScroll()
-
     return (
         <section className={s.hero}>
             <div className={s.container}>
@@ -21,30 +20,8 @@ export const Header = () => {
                         </Typography>
                     </div>
                     <div className={s.buttons}>
-                        <Typography
-                            onClick={() => scrollTo('ForDrivers', 0)}
-                            className={s.button}
-                            as={'button'}
-                            variant={'semibold_15'}
-                        >
-                            For drivers
-                        </Typography>
-                        <Typography
-                            onClick={() => scrollTo('ForCompanies', 0)}
-                            className={s.button}
-                            as={'button'}
-                            variant={'semibold_15'}
-                        >
-                            For companies
-                        </Typography>
-                        <Typography
-                            onClick={() => scrollTo('AboutUs')}
-                            className={s.button}
-                            as={'button'}
-                            variant={'semibold_15'}
-                        >
-                            About us
-                        </Typography>
+                        <Nav />
+                        <BurgerNav />
                     </div>
                 </div>
             </div>

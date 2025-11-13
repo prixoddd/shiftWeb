@@ -24,10 +24,12 @@ export const AboutUs = () => {
                                     height="303"
                                 />
                             </div>
-                            <div className={s.carts}>
-                                <StatCart text={'1500+ users'} />
-                                <StatCart text={'1500+ users'} />
-                                <StatCart text={'1500+ users'} />
+                            <div className={s.cartsWrapper}>
+                                <div className={s.carts}>
+                                    <StatCart text={'1500+ users'} />
+                                    <StatCart text={'1500+ users'} />
+                                    <StatCart text={'1500+ users'} />
+                                </div>
                             </div>
                         </div>
                         <div className={s.textAndButton}>

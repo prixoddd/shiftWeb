@@ -66,8 +66,10 @@ export const ForDrivers = () => {
                             </div>
                         </div>
                         <div className={s.screenshots}>
-                            <Garage1 className={s.garage1} />
-                            <Garage2 className={s.garage2} />
+                            <div className={s.garageGroup}>
+                                <Garage2 className={s.garage2} />
+                                <Garage1 className={s.garage1} />
+                            </div>
                         </div>
                     </div>
                 </div>

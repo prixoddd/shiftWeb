@@ -1,13 +1,15 @@
 @import '@radix-ui/colors/black-alpha.css';
 @import '@radix-ui/colors/mauve.css';
 @import '@radix-ui/colors/violet.css';
-@import '@/styles/sass/global';
+@import '../../styles/sass/global';
 
 .Root {
     border-radius: 6px;
-    width: 496px;
     background-color: var(--mauve-6);
-    //box-shadow: 0 2px 10px var(--black-a4);
+    @media screen and (max-width: 1024px) {
+        width: 100%;
+        max-width: 100%;
+    }
 }
 
 .Item {
@@ -16,23 +18,32 @@
 
     &:first-child {
         margin-top: 0;
-        //border-top-left-radius: 4px;
-        //border-top-right-radius: 4px;
     }
 
     &:last-child {
         margin-bottom: 1px;
-        //border-bottom-left-radius: 4px;
-        //border-bottom-right-radius: 4px;
     }
-
     &:focus-within {
         position: relative;
         z-index: 1;
         box-shadow: 0 0 0 2px $color-orange;
     }
 }
+.Item:active {
+    animation: flashBorder 1s forwards;
+}
 
+@keyframes flashBorder {
+    0% {
+        box-shadow: 0 0 0 2px $color-orange;
+    }
+    80% {
+        box-shadow: 0 0 0 2px $color-orange;
+    }
+    100% {
+        box-shadow: none;
+    }
+}
 .Header {
     all: unset;
     display: flex;
@@ -42,8 +53,6 @@
     all: unset;
     padding-top: 32px;
     font-family: inherit;
-    //background-color: transparent;
-    //padding: 0 20px;
     font-size: 18px;
     font-weight: 600;
 
@@ -52,12 +61,16 @@
     display: flex;
     align-items: flex-start;
     justify-content: space-between;
-
-    //box-shadow: 0 1px 0 var(--mauve-6);
     background-color: $color-white;
 
+    @media screen and (max-width: 1024px) {
+        padding-top: 24px;
+        font-size: 16px;
+        height: auto;
+        min-height: 44px;
+    }
+
     &:hover {
-        //background-color: var(--mauve-2);
     }
 }
 
@@ -81,7 +94,9 @@
     font-size: 16px;
     font-weight: 400;
     background-color: $color-white;
-
+    @media screen and (max-width: 480px) {
+        font-size: 14px;
+    }
     &[data-state='open'] {
         animation: slideDown 300ms cubic-bezier(0.87, 0, 0.13, 1);
     }
@@ -149,5 +164,31 @@
     }
     to {
         height: 0;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .Trigger {
+        padding-top: 24px;
+        font-size: 16px;
+        height: auto;
+        min-height: 44px;
+    }
+
+    .Dot {
+        gap: 4px;
+
+        &::before {
+            width: 8px;
+            height: 8px;
+        }
+    }
+
+    .Content {
+        font-size: 14px;
+    }
+
+    .ContentText {
+        padding: 12px 0 24px 0;
     }
 }

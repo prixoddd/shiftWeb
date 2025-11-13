@@ -37,8 +37,6 @@ export const ForCompanies = () => {
                                     src={`${base}images/deals@1x.webp`}
                                     srcSet={`${base}images/deals@2x.webp 2x`}
                                     alt="App interface showing active car maintenance deals"
-                                    width="622"
-                                    height="358"
                                     className={s.deals}
                                 />
                             </div>
@@ -47,8 +45,6 @@ export const ForCompanies = () => {
                                     src={`${base}images/list@1x.webp`}
                                     srcSet={`${base}images/list@2x.webp 2x`}
                                     alt="App interface showing client's active service bookings"
-                                    width="622"
-                                    height="357"
                                     className={s.list}
                                 />
                             </div>
