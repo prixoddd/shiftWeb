@@ -73,6 +73,10 @@
         }
     }
 
+    .screenshotsMobile {
+        display: none;
+    }
+
     .textAndAccordion {
         @include flex(column, space-between, stretch, nowrap);
 
@@ -169,6 +173,9 @@
                 right: auto;
                 margin-right: 0;
             }
+        }
+        .screenshotsDesktop {
+            display: none;
         }
     }
 }

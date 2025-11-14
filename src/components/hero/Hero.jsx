@@ -37,8 +37,8 @@ export const Hero = () => {
                     </div>
                     <div className={s.imageWrapper}>
                         <img
-                            src={`${base}images/blackBmw.webp`}
-                            srcSet={`${base}images/blackBmw.webp 2x`}
+                            src={`${base}images/blackBmw@1x.webp`}
+                            srcSet={`${base}images/blackBmw@2x.webp 2x`}
                             alt="Black Bmw in a showroom"
                             className={s.image}
                         />

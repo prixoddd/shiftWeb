@@ -31,7 +31,7 @@ export const ForCompanies = () => {
             <section className={s.hero}>
                 <div className={s.container}>
                     <div className={s.content}>
-                        <div className={s.screenshots}>
+                        <div className={`${s.screenshotsDesktop} ${s.screenshots} `}>
                             <div className={s.dealsImageWrapper}>
                                 <img
                                     src={`${base}images/deals@1x.webp`}
@@ -44,6 +44,22 @@ export const ForCompanies = () => {
                                 <img
                                     src={`${base}images/list@1x.webp`}
                                     srcSet={`${base}images/list@2x.webp 2x`}
+                                    alt="App interface showing client's active service bookings"
+                                    className={s.list}
+                                />
+                            </div>
+                        </div>
+                        <div className={`${s.screenshotsMobile} ${s.screenshots} `}>
+                            <div className={s.dealsImageWrapper}>
+                                <img
+                                    src={`${base}images/deals@2x.webp`}
+                                    alt="App interface showing active car maintenance deals"
+                                    className={s.deals}
+                                />
+                            </div>
+                            <div className={s.listImageWrapper}>
+                                <img
+                                    src={`${base}images/list@2x.webp`}
                                     alt="App interface showing client's active service bookings"
                                     className={s.list}
                                 />

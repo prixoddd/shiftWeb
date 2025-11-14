@@ -23,15 +23,17 @@
     &:last-child {
         margin-bottom: 1px;
     }
-    &:focus-within {
-        position: relative;
-        z-index: 1;
-        box-shadow: 0 0 0 2px $color-orange;
-    }
 }
-.Item:active {
-    animation: flashBorder 1s forwards;
+
+.Item:has(.Trigger:focus-visible) {
+    position: relative;
+    z-index: 1;
+    box-shadow: 0 0 0 2px $color-orange;
 }
+
+//.Item:active {
+//    animation: flashBorder 1s forwards;
+//}
 
 @keyframes flashBorder {
     0% {
@@ -51,6 +53,7 @@
 
 .Trigger {
     all: unset;
+    outline: none;
     padding-top: 32px;
     font-family: inherit;
     font-size: 18px;
@@ -72,6 +75,10 @@
 
     &:hover {
     }
+}
+
+.Trigger:focus {
+    outline: none;
 }
 
 .Dot {

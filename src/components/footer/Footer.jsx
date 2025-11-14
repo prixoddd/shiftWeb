@@ -22,7 +22,7 @@ export const Footer = () => {
                             <GooglePlay />
                         </Button>
                         <Button variant={'logo'}>
-                            <Appstore />
+                            <Appstore width="108" height="29" />
                         </Button>
                     </div>
                     <nav className={s.firstLinks}>
