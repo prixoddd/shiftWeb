@@ -1,73 +1,71 @@
 @import '../../../styles/sass/global';
 
-
 .burgerNav {
-  position: relative;
-  display: flex;
-  align-items: center;
-
-  .burgerIconWrapper {
-    z-index: 21;
+    position: relative;
     display: flex;
     align-items: center;
-    justify-content: center;
-    cursor: pointer;
 
-    .burgerIcon {
-      width: 28px;
-      height: 28px;
-      transition: transform 0.3s ease;
+    .burgerIconWrapper {
+        z-index: 21;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+
+        .burgerIcon {
+            width: 28px;
+            height: 28px;
+            transition: transform 0.3s ease;
+        }
+
+        &.open .burgerIcon {
+            transform: rotate(90deg);
+        }
     }
 
-    &.open .burgerIcon {
-      transform: rotate(90deg);
+    .burgerNavItems {
+        position: fixed;
+        top: 0;
+        right: -100%;
+        width: 75%;
+        height: 100vh;
+        backdrop-filter: blur(16px);
+        background: rgba($color-white, 0.7);
+        box-shadow: -4px 0 20px rgba($color-gray-main, 0.1);
+        border-left: 1px solid rgba($color-gray-content-tertiary, 0.3);
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        gap: 28px;
+        transition: all 0.4s ease;
+        z-index: 20;
+        opacity: 0;
+        transform: translateX(100%);
+
+        &.show {
+            opacity: 1;
+            transform: translateX(0);
+            right: 0;
+        }
+
+        .link {
+            color: $color-gray-main;
+            background: none;
+            border: none;
+            cursor: pointer;
+            transition:
+                color 0.3s ease,
+                transform 0.3s ease;
+
+            &:hover {
+                color: $color-orange;
+                transform: scale(1.05);
+            }
+        }
     }
-  }
 
-  .burgerNavItems {
-    position: fixed;
-    top: 0;
-    right: -100%;
-    width: 75%;
-    height: 100vh;
-    backdrop-filter: blur(16px);
-    background: rgba($color-white, 0.7);
-    box-shadow: -4px 0 20px rgba($color-gray-main, 0.1);
-    border-left: 1px solid rgba($color-gray-content-tertiary, 0.3);
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    gap: 28px;
-    transition: all 0.4s ease;
-    z-index: 20;
-    opacity: 0;
-    transform: translateX(100%);
-
-    &.show {
-      opacity: 1;
-      transform: translateX(0);
-      right: 0;
+    @media screen and (min-width: 576px) {
+        display: none;
     }
-
-    .link {
-      background: none;
-      border: none;
-      cursor: pointer;
-      transition: color 0.3s ease, transform 0.3s ease;
-
-
-      &:hover {
-        color: $color-orange;
-        transform: scale(1.05);
-      }
-    }
-  }
-
-  @media screen and (min-width: 576px) {
-    display: none;
-  }
 }
-
-
-

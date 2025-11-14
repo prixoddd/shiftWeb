@@ -1,13 +1,13 @@
 'use client'
-import React, {useState} from 'react'
+import React, { useState } from 'react'
 import s from './BurgerNav.module.scss'
-import {Typography} from '@/components/common/typography/Typography.jsx'
-import {useSmoothScroll} from '@/hooks/useSmoothScroll.jsx'
+import { Typography } from '@/components/common/typography/Typography.jsx'
+import { useSmoothScroll } from '@/hooks/useSmoothScroll.jsx'
 import { ReactComponent as Burger } from '@/assets/icons/burger.svg'
 
 export const BurgerNav = () => {
-    const {scrollTo} = useSmoothScroll()
-    const [menuIsOpen, setMenuIsOpen] = useState(false);
+    const { scrollTo } = useSmoothScroll()
+    const [menuIsOpen, setMenuIsOpen] = useState(false)
 
     const onBurgerBtnClick = () => {
         setMenuIsOpen(!menuIsOpen)
@@ -17,7 +17,6 @@ export const BurgerNav = () => {
         scrollTo(target, -50)
         setMenuIsOpen(false)
     }
-
 
     return (
         <nav className={s.burgerNav}>
@@ -29,6 +28,14 @@ export const BurgerNav = () => {
             </div>
 
             <div className={menuIsOpen ? `${s.burgerNavItems} ${s.show}` : s.burgerNavItems}>
+                <Typography
+                    onClick={() => handleMenuItemClick('AboutUs')}
+                    className={s.link}
+                    as={'button'}
+                    variant={'semibold_15'}
+                >
+                    About us
+                </Typography>
                 <Typography
                     onClick={() => handleMenuItemClick('ForDrivers')}
                     className={s.link}
@@ -45,16 +52,7 @@ export const BurgerNav = () => {
                 >
                     For companies
                 </Typography>
-                <Typography
-                    onClick={() => handleMenuItemClick('AboutUs')}
-                    className={s.link}
-                    as={'button'}
-                    variant={'semibold_15'}
-                >
-                    About us
-                </Typography>
             </div>
         </nav>
-
     )
 }
