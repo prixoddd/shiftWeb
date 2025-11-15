@@ -125,7 +125,7 @@
 
 @media screen and (max-width: 1024px) {
     .hero {
-        padding: 60px 0 0 0;
+        padding: 80px 0 0 0;
     }
 
     .content {
@@ -197,6 +197,10 @@
 }
 
 @media screen and (max-width: 1024px) and (min-width: 575px) {
+    //.hero {
+    //    padding: 40px 0 0 0;
+    //}
+
     .content {
         .textAndAccordion {
             .textAndButtons {
