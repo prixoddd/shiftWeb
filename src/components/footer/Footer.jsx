@@ -7,8 +7,22 @@ import { Button } from '@/components/common/button/Button.jsx'
 import { ReactComponent as Facebook } from '@/assets/icons/facebookLogo.svg'
 import { ReactComponent as Instagram } from '@/assets/icons/instagramLogo.svg'
 import { ReactComponent as LinkedIn } from '@/assets/icons/linkedInLogo.svg'
+import { useSmoothScroll } from '@/hooks/useSmoothScroll.jsx'
 
 export const Footer = () => {
+    const { scrollTo } = useSmoothScroll()
+
+    const handleClick = (target) => {
+        let offset = -100
+
+        if (window.innerWidth <= 1439 && window.innerWidth >= 1024) {
+            offset = -80
+        } else if (window.innerWidth < 1024) {
+            offset = -60
+        }
+
+        scrollTo(target, offset)
+    }
     return (
         <section className={s.hero}>
             <div className={s.container}>
@@ -28,31 +42,31 @@ export const Footer = () => {
                     <nav className={s.firstLinks}>
                         <ul>
                             <li className={s.linksItem}>
-                                <a className={s.linksLink} href="#">
-                                    For users
+                                <a onClick={() => handleClick('ForDrivers')} className={s.linksLink} href="#">
+                                    For drivers
                                 </a>
                             </li>
                             <li className={s.linksItem}>
-                                <a className={s.linksLink} href="#">
+                                <a onClick={() => handleClick('ForCompanies')} className={s.linksLink} href="#">
                                     For companies
                                 </a>
                             </li>
-                            <li className={s.linksItem}>
-                                <a className={s.linksLink} href="#">
-                                    Contact us
-                                </a>
-                            </li>
+                            {/*<li className={s.linksItem}>*/}
+                            {/*    <a onClick={() => handleClick('ContactUs')} className={s.linksLink} href="#">*/}
+                            {/*        Contact us*/}
+                            {/*    </a>*/}
+                            {/*</li>*/}
                         </ul>
                     </nav>
                     <nav className={s.secondLinks}>
                         <ul className={s.linksCol}>
                             <li className={s.linksItem}>
-                                <a className={s.linksLink} href="#">
+                                <a className={s.linksLink} href="https://shiftapp.ee/terms">
                                     Terms&Conditions
                                 </a>
                             </li>
                             <li className={s.linksItem}>
-                                <a className={s.linksLink} href="#">
+                                <a className={s.linksLink} href="https://shiftapp.ee/privacy-policy">
                                     Privacy policy
                                 </a>
                             </li>

@@ -10,6 +10,10 @@
     background-color: $color-orange;
     border-radius: 100px;
     font-weight: 600;
+    &:disabled {
+        background: $color-gray-border-primary;
+        color: $color-gray-main;
+    }
 }
 
 .secondary {
