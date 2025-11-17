@@ -39,6 +39,7 @@
             }
 
             .orangeButton {
+                margin-bottom: 21px;
             }
 
             .button {
@@ -51,7 +52,10 @@
                 flex-wrap: wrap;
                 justify-content: space-between;
 
-                .orangeButton,
+                .orangeButton {
+                    width: 100%;
+                }
+
                 .button {
                     flex: 0 0 45%;
                     transform: none;

@@ -2,7 +2,6 @@ import React from 'react'
 import s from '@/components/hero/Hero.module.scss'
 import { Typography } from '@/components/common/typography/Typography.jsx'
 import { Button } from '@/components/common/button/Button.jsx'
-import { ReactComponent as ArrowDown } from '@/assets/icons/arrowDown.svg'
 import { ReactComponent as TireReplace } from '@/assets/icons/tireReplace.svg'
 import { ReactComponent as CallRequest } from '@/assets/icons/callRequest.svg'
 import { ReactComponent as Body } from '@/assets/icons/body.svg'
@@ -45,10 +44,10 @@ export const Hero = () => {
                                 </Typography>
                             </Button>
 
-                            <Button className={s.button} variant={'secondary'}>
-                                <Typography variant={'semibold_15'}>Find out more</Typography>
-                                <ArrowDown />
-                            </Button>
+                            {/*<Button className={s.button} variant={'secondary'}>*/}
+                            {/*    <Typography variant={'semibold_15'}>Find out more</Typography>*/}
+                            {/*    <ArrowDown />*/}
+                            {/*</Button>*/}
                         </div>
                     </div>
                     <div className={s.imageWrapper}>

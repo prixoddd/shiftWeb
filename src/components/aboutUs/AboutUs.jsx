@@ -1,8 +1,6 @@
 import React from 'react'
 import s from './AboutUs.module.scss'
 import { Typography } from '@/components/common/typography/Typography.jsx'
-import { Button } from '@/components/common/button/Button.jsx'
-import { ReactComponent as Tag } from '@/assets/icons/tag.svg'
 import { Element as ScrollElement } from 'react-scroll'
 import { StatCart } from '@/components/common/statCart/StatCart.jsx'
 
@@ -44,10 +42,10 @@ export const AboutUs = () => {
                                 — Shift keeps everything in one place. Shift was born to bring simplicity to car care
                                 for everyone involved.
                             </Typography>
-                            <Button className={s.button} variant={'secondary'}>
-                                <Tag />
-                                <Typography variant={'semibold_15'}>Find some special offers</Typography>
-                            </Button>
+                            {/*<Button className={s.button} variant={'secondary'}>*/}
+                            {/*    <Tag />*/}
+                            {/*    <Typography variant={'semibold_15'}>Find some special offers</Typography>*/}
+                            {/*</Button>*/}
                         </div>
                     </div>
                 </div>
