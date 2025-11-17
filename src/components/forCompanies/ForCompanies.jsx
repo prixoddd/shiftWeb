@@ -34,6 +34,7 @@ export const ForCompanies = () => {
                         <div className={`${s.screenshotsDesktop} ${s.screenshots} `}>
                             <div className={s.dealsImageWrapper}>
                                 <img
+                                    loading="lazy"
                                     src={`${base}images/deals@1x.webp`}
                                     srcSet={`${base}images/deals@2x.webp 2x`}
                                     alt="App interface showing active car maintenance deals"
@@ -42,6 +43,7 @@ export const ForCompanies = () => {
                             </div>
                             <div className={s.listImageWrapper}>
                                 <img
+                                    loading="lazy"
                                     src={`${base}images/list@1x.webp`}
                                     srcSet={`${base}images/list@2x.webp 2x`}
                                     alt="App interface showing client's active service bookings"
@@ -52,6 +54,7 @@ export const ForCompanies = () => {
                         <div className={`${s.screenshotsMobile} ${s.screenshots} `}>
                             <div className={s.dealsImageWrapper}>
                                 <img
+                                    loading="lazy"
                                     src={`${base}images/deals@2x.webp`}
                                     alt="App interface showing active car maintenance deals"
                                     className={s.deals}
@@ -59,6 +62,7 @@ export const ForCompanies = () => {
                             </div>
                             <div className={s.listImageWrapper}>
                                 <img
+                                    loading="lazy"
                                     src={`${base}images/list@2x.webp`}
                                     alt="App interface showing client's active service bookings"
                                     className={s.list}
@@ -81,7 +85,15 @@ export const ForCompanies = () => {
                                     Partner with Shift and grow your business with smart, simple tools.
                                 </Typography>
                                 <div className={s.buttons}>
-                                    <Button variant={'logo'}>Register</Button>
+                                    <Button
+                                        as="a"
+                                        href="https://shiftapp.ee/signup"
+                                        variant="logo"
+                                        target="_blank"
+                                        rel="noreferrer noopener"
+                                    >
+                                        Register
+                                    </Button>
                                 </div>
                             </div>
                         </div>

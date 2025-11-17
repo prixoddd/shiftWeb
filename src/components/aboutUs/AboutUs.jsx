@@ -1,4 +1,3 @@
-'use client'
 import React from 'react'
 import s from './AboutUs.module.scss'
 import { Typography } from '@/components/common/typography/Typography.jsx'
@@ -26,9 +25,9 @@ export const AboutUs = () => {
                             </div>
                             <div className={s.cartsWrapper}>
                                 <div className={s.carts}>
-                                    <StatCart text={'1500+ users'} />
-                                    <StatCart text={'1500+ users'} />
-                                    <StatCart text={'1500+ users'} />
+                                    <StatCart text={'10+ companies'} />
+                                    <StatCart text={'100+ users'} />
+                                    <StatCart text={'300+ bookings'} />
                                 </div>
                             </div>
                         </div>

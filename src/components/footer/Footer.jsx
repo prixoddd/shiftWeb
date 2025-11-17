@@ -32,10 +32,24 @@ export const Footer = () => {
                         <p>© 2022. All rights reserved</p>
                     </div>
                     <div className={s.buttons}>
-                        <Button variant={'logo'}>
+                        <Button
+                            as="a"
+                            href="https://play.google.com/store/apps/details?id=com.shift.drive.shiftapp"
+                            variant="logo"
+                            target="_blank"
+                            rel="noreferrer noopener"
+                            aria-label="Download Shift on Google Play"
+                        >
                             <GooglePlay />
                         </Button>
-                        <Button variant={'logo'}>
+                        <Button
+                            as="a"
+                            href="https://apps.apple.com/us/app/shift-book-track-your-car/id6741852587"
+                            variant="logo"
+                            target="_blank"
+                            rel="noreferrer noopener"
+                            aria-label="Download Shift on the App Store"
+                        >
                             <Appstore width="108" height="29" />
                         </Button>
                     </div>

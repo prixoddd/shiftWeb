@@ -56,10 +56,25 @@ export const ForDrivers = () => {
                                     Download Shift today and experience the future of car maintenance!
                                 </Typography>
                                 <div className={s.buttons}>
-                                    <Button variant={'logo'}>
+                                    <Button
+                                        as="a"
+                                        href="https://play.google.com/store/apps/details?id=com.shift.drive.shiftapp"
+                                        variant="logo"
+                                        target="_blank"
+                                        rel="noreferrer noopener"
+                                        aria-label="Download Shift on Google Play"
+                                    >
                                         <GooglePlay />
                                     </Button>
-                                    <Button variant={'logo'}>
+
+                                    <Button
+                                        as="a"
+                                        href="https://apps.apple.com/us/app/shift-book-track-your-car/id6741852587"
+                                        variant="logo"
+                                        target="_blank"
+                                        rel="noreferrer noopener"
+                                        aria-label="Download Shift on the App Store"
+                                    >
                                         <Appstore width="108" height="29" />
                                     </Button>
                                 </div>
@@ -67,8 +82,8 @@ export const ForDrivers = () => {
                         </div>
                         <div className={s.screenshots}>
                             <div className={s.garageGroup}>
-                                <Garage2 className={s.garage2} />
-                                <Garage1 className={s.garage1} />
+                                <Garage2 className={s.garage2} aria-hidden="true" focusable="false" />
+                                <Garage1 className={s.garage1} aria-hidden="true" focusable="false" />
                             </div>
                         </div>
                     </div>
