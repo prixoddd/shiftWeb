@@ -7,8 +7,22 @@ import { ReactComponent as TireReplace } from '@/assets/icons/tireReplace.svg'
 import { ReactComponent as CallRequest } from '@/assets/icons/callRequest.svg'
 import { ReactComponent as Body } from '@/assets/icons/body.svg'
 import { ReactComponent as BodyColor } from '@/assets/icons/bodyColor.svg'
+import { useSmoothScroll } from '@/hooks/useSmoothScroll.jsx'
 
 export const Hero = () => {
+    const { scrollTo } = useSmoothScroll()
+
+    const handleClick = (target) => {
+        let offset = -100
+
+        if (window.innerWidth <= 1439 && window.innerWidth >= 1024) {
+            offset = -80
+        } else if (window.innerWidth < 1024) {
+            offset = -60
+        }
+
+        scrollTo(target, offset)
+    }
     const base = import.meta.env.BASE_URL
     return (
         <section className={s.hero}>
@@ -26,7 +40,9 @@ export const Hero = () => {
                                 bookings, document work, and keep customers happy — all through our platform.
                             </Typography>
                             <Button className={s.orangeButton} variant={'primary'}>
-                                <Typography variant={'semibold_15'}>Try it now</Typography>
+                                <Typography onClick={() => handleClick('ForDrivers')} variant={'semibold_15'}>
+                                    Try it now
+                                </Typography>
                             </Button>
 
                             <Button className={s.button} variant={'secondary'}>
