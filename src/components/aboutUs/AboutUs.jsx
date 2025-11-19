@@ -23,9 +23,9 @@ export const AboutUs = () => {
                             </div>
                             <div className={s.cartsWrapper}>
                                 <div className={s.carts}>
-                                    <StatCart text={'10+ companies'} />
-                                    <StatCart text={'100+ users'} />
-                                    <StatCart text={'300+ bookings'} />
+                                    <StatCart count={10} text={'companies'} />
+                                    <StatCart count={100} text={'users'} />
+                                    <StatCart count={300} text={'bookings'} />
                                 </div>
                             </div>
                         </div>
