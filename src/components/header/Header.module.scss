@@ -20,6 +20,9 @@
     @include flex(row, space-between, center, nowrap);
 
     .logoAndSlogan {
+        a {
+            @include flex(row, flex-start, center, nowrap);
+        }
         @include flex(row, flex-start, center, nowrap);
 
         .slogan {
