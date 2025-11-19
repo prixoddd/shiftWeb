@@ -4,8 +4,11 @@
 @import '../../styles/sass/global';
 
 .Root {
-    border-radius: 6px;
-    background-color: var(--mauve-6);
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+    background-color: transparent;
+
     @media screen and (max-width: 1024px) {
         width: 100%;
         max-width: 100%;
@@ -14,14 +17,21 @@
 
 .Item {
     overflow: hidden;
-    margin-top: 1px;
+    margin: 0;
+    border-radius: 12px;
+    background-color: $color-white;
+    border: 1px solid rgba($color-gray-border-primary, 0.4);
+    box-shadow: 0 6px 18px rgba(0, 0, 0, 0.04);
+    transition:
+        border-color 200ms ease,
+        box-shadow 200ms ease,
+        background-color 200ms ease;
 
-    &:first-child {
-        margin-top: 0;
-    }
-
-    &:last-child {
-        margin-bottom: 1px;
+    &[data-state='open'] {
+        border-color: $color-orange;
+        background-color: rgba($color-orange, 0.03);
+        box-shadow: 0 12px 30px rgba(0, 0, 0, 0.08);
+        transform: translateY(1px);
     }
 }
 
@@ -30,10 +40,6 @@
     z-index: 1;
     box-shadow: 0 0 0 2px $color-orange;
 }
-
-//.Item:active {
-//    animation: flashBorder 1s forwards;
-//}
 
 @keyframes flashBorder {
     0% {
@@ -46,6 +52,7 @@
         box-shadow: none;
     }
 }
+
 .Header {
     all: unset;
     display: flex;
@@ -54,26 +61,28 @@
 .Trigger {
     all: unset;
     outline: none;
-    padding-top: 32px;
     font-family: inherit;
     font-size: 18px;
     font-weight: 600;
 
-    height: 44px;
-    flex: 1;
+    padding: 18px 20px;
+    width: 100%;
     display: flex;
-    align-items: flex-start;
+    align-items: center;
     justify-content: space-between;
-    background-color: $color-white;
+    cursor: pointer;
+    background-color: transparent;
+    transition:
+        background-color 200ms ease,
+        color 200ms ease;
 
     @media screen and (max-width: 1024px) {
-        padding-top: 24px;
         font-size: 16px;
-        height: auto;
-        min-height: 44px;
+        padding: 16px 16px;
     }
 
     &:hover {
+        background-color: rgba($color-gray-background, 0.6);
     }
 }
 
@@ -93,28 +102,43 @@
         border-radius: 50%;
         background-color: $color-orange;
         flex-shrink: 0;
+        transition:
+            transform 200ms ease,
+            box-shadow 200ms ease;
     }
+}
+
+.Trigger[data-state='open'] .Dot::before {
+    transform: scale(1.25);
+    box-shadow: 0 0 0 4px rgba($color-orange, 0.16);
 }
 
 .Content {
     overflow: hidden;
     font-size: 16px;
     font-weight: 400;
-    background-color: $color-white;
+    background-color: transparent;
+    border-top: 1px solid rgba($color-gray-border-primary, 0.4);
+
     @media screen and (max-width: 480px) {
         font-size: 14px;
     }
+
     &[data-state='open'] {
-        animation: slideDown 300ms cubic-bezier(0.87, 0, 0.13, 1);
+        animation: slideDown 260ms cubic-bezier(0.87, 0, 0.13, 1);
     }
 
     &[data-state='closed'] {
-        animation: slideUp 300ms cubic-bezier(0.87, 0, 0.13, 1);
+        animation: slideUp 220ms cubic-bezier(0.87, 0, 0.13, 1);
     }
 }
 
 .ContentText {
-    padding: 16px 0 40px 0;
+    padding: 12px 20px 18px 20px;
+
+    @media screen and (max-width: 480px) {
+        padding: 10px 16px 16px 16px;
+    }
 }
 
 .ChevronBox {
@@ -125,63 +149,68 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    border-radius: 4.44px;
+    border-radius: 999px;
+    transition: background-color 200ms ease;
+}
+
+.Trigger[data-state='open'] .ChevronBox {
+    background-color: darken($color-gray-background, 4%);
 }
 
 .Chevron {
     color: var(--violet-10);
-    transition: transform 300ms cubic-bezier(0.87, 0, 0.13, 1);
 }
 
 .Icon {
     position: absolute;
     transition:
-        transform 300ms cubic-bezier(0.87, 0, 0.13, 1),
-        opacity 300ms ease;
+        transform 260ms cubic-bezier(0.87, 0, 0.13, 1),
+        opacity 220ms ease;
 }
 
 .IconOpen {
     opacity: 0;
+    transform: rotate(-90deg) scale(0.7);
 }
 
 .IconClosed {
     opacity: 1;
+    transform: rotate(0deg) scale(1);
 }
 
 .Trigger[data-state='open'] .IconOpen {
     opacity: 1;
+    transform: rotate(0deg) scale(1);
 }
 
 .Trigger[data-state='open'] .IconClosed {
     opacity: 0;
+    transform: rotate(90deg) scale(0.7);
 }
 
 @keyframes slideDown {
     from {
         height: 0;
+        opacity: 0;
     }
     to {
         height: var(--radix-accordion-content-height);
+        opacity: 1;
     }
 }
 
 @keyframes slideUp {
     from {
         height: var(--radix-accordion-content-height);
+        opacity: 1;
     }
     to {
         height: 0;
+        opacity: 0;
     }
 }
 
 @media screen and (max-width: 1024px) {
-    .Trigger {
-        padding-top: 24px;
-        font-size: 16px;
-        height: auto;
-        min-height: 44px;
-    }
-
     .Dot {
         gap: 4px;
 
@@ -193,9 +222,5 @@
 
     .Content {
         font-size: 14px;
-    }
-
-    .ContentText {
-        padding: 12px 0 24px 0;
     }
 }

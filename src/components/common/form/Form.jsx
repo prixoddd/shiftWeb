@@ -4,7 +4,6 @@ import * as yup from 'yup'
 import s from './Form.module.scss'
 import { Button } from '@/components/common/button/Button.jsx'
 import { send } from '@emailjs/browser'
-
 import { toast, Toaster } from 'react-hot-toast'
 import { FallingLines } from 'react-loader-spinner'
 import { useTranslation } from 'react-i18next'
@@ -24,6 +23,7 @@ export const ContactForm = () => {
             .required(t('contactUs.form.validation.questionRequired'))
             .max(300, t('contactUs.form.validation.questionMaxLength')),
     })
+
     const {
         register,
         handleSubmit,
@@ -49,17 +49,17 @@ export const ContactForm = () => {
                     publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
                 }
             )
-            reset()
 
+            reset()
             toast.dismiss()
             toast.success(t('contactUs.form.success'))
         } catch (err) {
             toast.dismiss()
             toast.error(t('contactUs.form.error'))
-
             console.error(err)
         }
     }
+
     return (
         <form onSubmit={handleSubmit(onSubmit)} className={s.contactForm}>
             <Toaster
@@ -70,11 +70,8 @@ export const ContactForm = () => {
                         width: '320px',
                         fontSize: '18px',
                     },
-
                     loading: {
-                        style: {
-                            // border: '1px solid #f58e54',
-                        },
+                        style: {},
                         icon: (
                             <FallingLines
                                 color="#f58e54"
@@ -87,7 +84,7 @@ export const ContactForm = () => {
                 }}
             />
 
-            <div className={s.formGroup}>
+            <div className={s.formGroup} data-aos="fade-up" data-aos-duration="600" data-aos-delay="100">
                 <label htmlFor="contact-name">{t('contactUs.form.name')}</label>
                 <input
                     id="contact-name"
@@ -100,7 +97,7 @@ export const ContactForm = () => {
                 {errors.name && <span className={s.error}>{errors.name.message}</span>}
             </div>
 
-            <div className={s.formGroup}>
+            <div className={s.formGroup} data-aos="fade-up" data-aos-duration="600" data-aos-delay="200">
                 <label htmlFor="contact-email">{t('contactUs.form.email')}</label>
                 <input
                     id="contact-email"
@@ -113,7 +110,7 @@ export const ContactForm = () => {
                 {errors.email && <span className={s.error}>{errors.email.message}</span>}
             </div>
 
-            <div className={s.formGroup}>
+            <div className={s.formGroup} data-aos="fade-up" data-aos-duration="600" data-aos-delay="300">
                 <label htmlFor="contact-question">{t('contactUs.form.question')}</label>
                 <textarea
                     id="contact-question"
@@ -125,7 +122,7 @@ export const ContactForm = () => {
                 {errors.question && <span className={s.error}>{errors.question.message}</span>}
             </div>
 
-            <div className={s.buttonContainer}>
+            <div className={s.buttonContainer} data-aos="zoom-in" data-aos-duration="600" data-aos-delay="400">
                 <Button variant={'primary'} type="submit" disabled={!!errors.question || isSubmitting}>
                     {t('contactUs.form.send')}
                 </Button>

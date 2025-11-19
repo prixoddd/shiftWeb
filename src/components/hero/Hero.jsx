@@ -24,45 +24,76 @@ export const Hero = () => {
 
         scrollTo(target, offset)
     }
+
     const base = import.meta.env.BASE_URL
+
     return (
         <section className={s.hero}>
             <div className={s.container}>
-                <div className={s.content}>
-                    <div className={s.heroIntro}>
+                <div className={s.content} data-aos="fade-up" data-aos-duration="700">
+                    <div className={s.heroIntro} data-aos="fade-right" data-aos-duration="800" data-aos-delay="50">
                         <div className={s.textAndButton}>
-                            <Typography className={s.title} variant={'semibold_38'}>
+                            <Typography
+                                className={s.title}
+                                variant={'semibold_38'}
+                                data-aos="fade-right"
+                                data-aos-duration="800"
+                                data-aos-delay="100"
+                            >
                                 {t('hero.title')}
                             </Typography>
-                            <Typography className={s.text} variant={'regular_16'}>
+
+                            <Typography
+                                className={s.text}
+                                variant={'regular_16'}
+                                data-aos="fade-right"
+                                data-aos-duration="800"
+                                data-aos-delay="200"
+                            >
                                 {t('hero.description')}
                             </Typography>
-                            <Button className={s.orangeButton} variant={'primary'}>
-                                <Typography onClick={() => handleClick('ForDrivers')} variant={'semibold_15'}>
-                                    {t('hero.tryItNow')}
-                                </Typography>
-                            </Button>
 
-                            {/*<Button className={s.button} variant={'secondary'}>*/}
-                            {/*    <Typography variant={'semibold_15'}>Find out more</Typography>*/}
-                            {/*    <ArrowDown />*/}
-                            {/*</Button>*/}
+                            <div
+                                className={s.buttonWrapper}
+                                data-aos="zoom-in"
+                                data-aos-duration="700"
+                                data-aos-delay="300"
+                            >
+                                <Button
+                                    className={s.orangeButton}
+                                    variant={'primary'}
+                                    onClick={() => handleClick('ForDrivers')}
+                                >
+                                    <Typography variant={'semibold_15'}>{t('hero.tryItNow')}</Typography>
+                                </Button>
+                            </div>
                         </div>
                     </div>
-                    <div className={s.imageWrapper}>
+
+                    <div className={s.imageWrapper} data-aos="fade-left" data-aos-duration="800" data-aos-delay="150">
                         <img
                             src={`${base}images/blackBmw@1x.webp`}
                             srcSet={`${base}images/blackBmw@2x.webp 2x`}
                             alt="Black Bmw in a showroom"
                             className={s.image}
                         />
+
                         <div className={s.topCardsGroup}>
-                            <TireReplace className={s.tireReplace} />
-                            <CallRequest className={s.callRequest} />
+                            <div className={s.card} data-aos="zoom-in" data-aos-duration="600" data-aos-delay="250">
+                                <TireReplace className={s.tireReplace} />
+                            </div>
+                            <div className={s.card} data-aos="zoom-in" data-aos-duration="600" data-aos-delay="350">
+                                <CallRequest className={s.callRequest} />
+                            </div>
                         </div>
+
                         <div className={s.cardsGroup}>
-                            <Body className={s.body} />
-                            <BodyColor className={s.bodyColor} />
+                            <div className={s.card} data-aos="zoom-in-up" data-aos-duration="600" data-aos-delay="400">
+                                <Body className={s.body} />
+                            </div>
+                            <div className={s.card} data-aos="zoom-in-up" data-aos-duration="600" data-aos-delay="500">
+                                <BodyColor className={s.bodyColor} />
+                            </div>
                         </div>
                     </div>
                 </div>

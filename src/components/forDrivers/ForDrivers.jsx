@@ -12,6 +12,7 @@ import { useTranslation } from 'react-i18next'
 
 export const ForDrivers = () => {
     const { t } = useTranslation()
+
     const accordionItems = [
         {
             title: t('forDrivers.accordion.appointmentScheduling.title'),
@@ -37,21 +38,56 @@ export const ForDrivers = () => {
 
     return (
         <ScrollElement name="ForDrivers">
-            <section className={s.hero}>
+            <section className={s.hero} data-aos="fade-up" data-aos-duration="700">
                 <div className={s.container}>
                     <div className={s.content}>
-                        <div className={s.textAndAccordion}>
+                        {/* Левая часть — текст + аккордеон */}
+                        <div
+                            className={s.textAndAccordion}
+                            data-aos="fade-right"
+                            data-aos-duration="800"
+                            data-aos-delay="100"
+                        >
                             <div className={s.text}>
-                                <Typography variant={'semibold_36'}>{t('forDrivers.title')}</Typography>
-                                <Typography variant={'regular_18'}>
-                                    {t('forDrivers.subtitle')} <br />
-                                    <br /> {t('forDrivers.description')}
+                                <Typography
+                                    variant={'semibold_36'}
+                                    data-aos="fade-right"
+                                    data-aos-duration="800"
+                                    data-aos-delay="150"
+                                >
+                                    {t('forDrivers.title')}
+                                </Typography>
+
+                                <Typography
+                                    variant={'regular_18'}
+                                    data-aos="fade-right"
+                                    data-aos-duration="800"
+                                    data-aos-delay="250"
+                                >
+                                    {t('forDrivers.subtitle')}
+                                    <br />
+                                    <br />
+                                    {t('forDrivers.description')}
                                 </Typography>
                             </div>
 
-                            <ShiftAccordion items={accordionItems} />
-                            <div className={s.textAndButtons}>
+                            <div
+                                className={s.accordionContainer}
+                                data-aos="fade-right"
+                                data-aos-duration="800"
+                                data-aos-delay="350"
+                            >
+                                <ShiftAccordion items={accordionItems} />
+                            </div>
+
+                            <div
+                                className={s.textAndButtons}
+                                data-aos="fade-right"
+                                data-aos-duration="800"
+                                data-aos-delay="450"
+                            >
                                 <Typography variant={'regular_14'}>{t('forDrivers.downloadText')}</Typography>
+
                                 <div className={s.buttons}>
                                     <Button
                                         as="a"
@@ -60,6 +96,9 @@ export const ForDrivers = () => {
                                         target="_blank"
                                         rel="noreferrer noopener"
                                         aria-label="Download Shift on Google Play"
+                                        data-aos="zoom-in"
+                                        data-aos-duration="600"
+                                        data-aos-delay="500"
                                     >
                                         <GooglePlay />
                                     </Button>
@@ -71,16 +110,41 @@ export const ForDrivers = () => {
                                         target="_blank"
                                         rel="noreferrer noopener"
                                         aria-label="Download Shift on the App Store"
+                                        data-aos="zoom-in"
+                                        data-aos-duration="600"
+                                        data-aos-delay="600"
                                     >
                                         <Appstore width="108" height="29" />
                                     </Button>
                                 </div>
                             </div>
                         </div>
-                        <div className={s.screenshots}>
+
+                        {/* Правая часть — мобильные mockups / Garage SVGs */}
+                        <div
+                            className={s.screenshots}
+                            data-aos="fade-left"
+                            data-aos-duration="800"
+                            data-aos-delay="200"
+                        >
                             <div className={s.garageGroup}>
-                                <Garage2 className={s.garage2} aria-hidden="true" focusable="false" />
-                                <Garage1 className={s.garage1} aria-hidden="true" focusable="false" />
+                                <Garage2
+                                    className={s.garage2}
+                                    aria-hidden="true"
+                                    focusable="false"
+                                    data-aos="zoom-in"
+                                    data-aos-duration="600"
+                                    data-aos-delay="300"
+                                />
+
+                                <Garage1
+                                    className={s.garage1}
+                                    aria-hidden="true"
+                                    focusable="false"
+                                    data-aos="zoom-in"
+                                    data-aos-duration="600"
+                                    data-aos-delay="400"
+                                />
                             </div>
                         </div>
                     </div>

@@ -25,15 +25,17 @@ export const Footer = () => {
 
         scrollTo(target, offset)
     }
+
     return (
-        <section className={s.hero}>
+        <section className={s.hero} data-aos="fade-up" data-aos-duration="700">
             <div className={s.container}>
                 <div className={s.content}>
-                    <div className={s.logoAndText}>
+                    <div className={s.logoAndText} data-aos="fade-up" data-aos-duration="700" data-aos-delay="50">
                         <LogoIcon />
                         <p>© 2022. All rights reserved</p>
                     </div>
-                    <div className={s.buttons}>
+
+                    <div className={s.buttons} data-aos="zoom-in" data-aos-duration="700" data-aos-delay="150">
                         <Button
                             as="a"
                             href="https://play.google.com/store/apps/details?id=com.shift.drive.shiftapp"
@@ -44,6 +46,7 @@ export const Footer = () => {
                         >
                             <GooglePlay />
                         </Button>
+
                         <Button
                             as="a"
                             href="https://apps.apple.com/us/app/shift-book-track-your-car/id6741852587"
@@ -55,26 +58,24 @@ export const Footer = () => {
                             <Appstore width="108" height="29" />
                         </Button>
                     </div>
-                    <nav className={s.firstLinks}>
+
+                    <nav className={s.firstLinks} data-aos="fade-up" data-aos-duration="700" data-aos-delay="200">
                         <ul>
                             <li className={s.linksItem}>
                                 <a onClick={() => handleClick('ForDrivers')} className={s.linksLink} href="#">
                                     {t('footer.forDrivers')}
                                 </a>
                             </li>
+
                             <li className={s.linksItem}>
                                 <a onClick={() => handleClick('ForCompanies')} className={s.linksLink} href="#">
                                     {t('footer.forCompanies')}
                                 </a>
                             </li>
-                            {/*<li className={s.linksItem}>*/}
-                            {/*    <a onClick={() => handleClick('ContactUs')} className={s.linksLink} href="#">*/}
-                            {/*        Contact us*/}
-                            {/*    </a>*/}
-                            {/*</li>*/}
                         </ul>
                     </nav>
-                    <nav className={s.secondLinks}>
+
+                    <nav className={s.secondLinks} data-aos="fade-up" data-aos-duration="700" data-aos-delay="250">
                         <ul className={s.linksCol}>
                             <li className={s.linksItem}>
                                 <a className={s.linksLink} href="https://shiftapp.ee/terms">
@@ -88,8 +89,10 @@ export const Footer = () => {
                             </li>
                         </ul>
                     </nav>
-                    <div className={s.socialsContainer}>
+
+                    <div className={s.socialsContainer} data-aos="fade-up" data-aos-duration="700" data-aos-delay="300">
                         <p>{t('footer.findUsOnSocials')}</p>
+
                         <div className={s.socials}>
                             <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
                                 <Facebook />

@@ -9,11 +9,12 @@ import { useTranslation } from 'react-i18next'
 
 export const Header = () => {
     const { t } = useTranslation()
+
     return (
-        <section className={s.hero}>
+        <section className={s.hero} data-aos="fade-down" data-aos-duration="600">
             <div className={s.container}>
                 <div className={s.content}>
-                    <div className={s.logoAndSlogan}>
+                    <div className={s.logoAndSlogan} data-aos="fade-right" data-aos-duration="700" data-aos-delay="50">
                         <a href="/" aria-label="Go to homepage">
                             <LogoIcon />
                         </a>
@@ -21,8 +22,12 @@ export const Header = () => {
                             {t('header.slogan')}
                         </Typography>
                     </div>
+
                     <div className={s.buttons}>
-                        <Nav />
+                        <div data-aos="fade-left" data-aos-duration="700" data-aos-delay="100">
+                            <Nav />
+                        </div>
+
                         <BurgerNav />
                     </div>
                 </div>

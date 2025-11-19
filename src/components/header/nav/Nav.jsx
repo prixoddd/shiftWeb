@@ -32,6 +32,7 @@ export const Nav = () => {
             >
                 {t('nav.aboutUs')}
             </Typography>
+
             <Typography
                 onClick={() => handleClick('ForDrivers')}
                 className={s.button}
@@ -40,6 +41,7 @@ export const Nav = () => {
             >
                 {t('nav.forDrivers')}
             </Typography>
+
             <Typography
                 onClick={() => handleClick('ForCompanies')}
                 className={s.button}
@@ -48,6 +50,7 @@ export const Nav = () => {
             >
                 {t('nav.forCompanies')}
             </Typography>
+
             <LanguageSwitcher />
         </div>
     )

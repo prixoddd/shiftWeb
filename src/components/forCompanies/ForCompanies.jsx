@@ -28,13 +28,24 @@ export const ForCompanies = () => {
     ]
 
     const base = import.meta.env.BASE_URL
+
     return (
         <ScrollElement name="ForCompanies">
-            <section className={s.hero}>
+            <section className={s.hero} data-aos="fade-up" data-aos-duration="700">
                 <div className={s.container}>
                     <div className={s.content}>
-                        <div className={`${s.screenshotsDesktop} ${s.screenshots} `}>
-                            <div className={s.dealsImageWrapper}>
+                        <div
+                            className={`${s.screenshotsDesktop} ${s.screenshots}`}
+                            data-aos="fade-right"
+                            data-aos-duration="800"
+                            data-aos-delay="100"
+                        >
+                            <div
+                                className={s.dealsImageWrapper}
+                                data-aos="zoom-in"
+                                data-aos-duration="700"
+                                data-aos-delay="150"
+                            >
                                 <img
                                     loading="lazy"
                                     src={`${base}images/deals@1x.webp`}
@@ -43,7 +54,12 @@ export const ForCompanies = () => {
                                     className={s.deals}
                                 />
                             </div>
-                            <div className={s.listImageWrapper}>
+                            <div
+                                className={s.listImageWrapper}
+                                data-aos="zoom-in-up"
+                                data-aos-duration="700"
+                                data-aos-delay="250"
+                            >
                                 <img
                                     loading="lazy"
                                     src={`${base}images/list@1x.webp`}
@@ -53,8 +69,19 @@ export const ForCompanies = () => {
                                 />
                             </div>
                         </div>
-                        <div className={`${s.screenshotsMobile} ${s.screenshots} `}>
-                            <div className={s.dealsImageWrapper}>
+
+                        <div
+                            className={`${s.screenshotsMobile} ${s.screenshots}`}
+                            data-aos="fade-up"
+                            data-aos-duration="800"
+                            data-aos-delay="100"
+                        >
+                            <div
+                                className={s.dealsImageWrapper}
+                                data-aos="zoom-in"
+                                data-aos-duration="700"
+                                data-aos-delay="150"
+                            >
                                 <img
                                     loading="lazy"
                                     src={`${base}images/deals@2x.webp`}
@@ -62,7 +89,12 @@ export const ForCompanies = () => {
                                     className={s.deals}
                                 />
                             </div>
-                            <div className={s.listImageWrapper}>
+                            <div
+                                className={s.listImageWrapper}
+                                data-aos="zoom-in-up"
+                                data-aos-duration="700"
+                                data-aos-delay="250"
+                            >
                                 <img
                                     loading="lazy"
                                     src={`${base}images/list@2x.webp`}
@@ -71,14 +103,48 @@ export const ForCompanies = () => {
                                 />
                             </div>
                         </div>
-                        <div className={s.textAndAccordion}>
+
+                        <div
+                            className={s.textAndAccordion}
+                            data-aos="fade-left"
+                            data-aos-duration="800"
+                            data-aos-delay="200"
+                        >
                             <div className={s.text}>
-                                <Typography variant={'semibold_36'}>{t('forCompanies.title')}</Typography>
-                                <Typography variant={'regular_18'}>{t('forCompanies.description')}</Typography>
+                                <Typography
+                                    variant={'semibold_36'}
+                                    data-aos="fade-left"
+                                    data-aos-duration="800"
+                                    data-aos-delay="250"
+                                >
+                                    {t('forCompanies.title')}
+                                </Typography>
+
+                                <Typography
+                                    variant={'regular_18'}
+                                    data-aos="fade-left"
+                                    data-aos-duration="800"
+                                    data-aos-delay="300"
+                                >
+                                    {t('forCompanies.description')}
+                                </Typography>
                             </div>
 
-                            <ShiftAccordion items={accordionItems} />
-                            <div className={s.textAndButtons}>
+                            <div
+                                className={s.accordionContainer}
+                                data-aos="fade-left"
+                                data-aos-duration="800"
+                                data-aos-delay="350"
+                            >
+                                <ShiftAccordion items={accordionItems} />
+                            </div>
+
+                            <div
+                                className={s.textAndButtons}
+                                data-aos="fade-left"
+                                data-aos-duration="800"
+                                data-aos-delay="400"
+                            >
                                 <Typography variant={'regular_14'}>{t('forCompanies.registerText')}</Typography>
                                 <div className={s.buttons}>
                                     <Button
@@ -87,6 +153,9 @@ export const ForCompanies = () => {
                                         variant="logo"
                                         target="_blank"
                                         rel="noreferrer noopener"
+                                        data-aos="zoom-in"
+                                        data-aos-duration="600"
+                                        data-aos-delay="450"
                                     >
                                         {t('forCompanies.register')}
                                     </Button>
