@@ -1,25 +1,24 @@
 @import '../../../styles/sass/global';
 
-
 .nav {
-  width: fit-content;
+    width: fit-content;
 
-  .button {
-    white-space: nowrap;
+    .button {
+        white-space: nowrap;
 
-    button:focus {
-      outline: 2px solid $color-orange;
+        button:focus {
+            outline: 2px solid $color-orange;
+        }
+
+        @include button-reset;
     }
 
-    @include button-reset;
-  }
-
-  gap: 45px;
-  @include flex(row, flex-end, center, nowrap);
-
-  @media screen and (width < 576px) {
-    display: none;
-  }
+    gap: 45px;
+    @include flex(row, flex-end, center, nowrap);
+    @media screen and (max-width: 1108px) {
+        gap: 25px;
+    }
+    @media screen and (width < 576px) {
+        display: none;
+    }
 }
-
-

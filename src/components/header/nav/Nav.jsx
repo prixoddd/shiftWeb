@@ -3,9 +3,12 @@ import React from 'react'
 import s from './Nav.module.scss'
 import { Typography } from '@/components/common/typography/Typography.jsx'
 import { useSmoothScroll } from '@/hooks/useSmoothScroll.jsx'
+import { LanguageSwitcher } from '@/components/common/languageSwitcher/LanguageSwitcher.jsx'
+import { useTranslation } from 'react-i18next'
 
 export const Nav = () => {
     const { scrollTo } = useSmoothScroll()
+    const { t } = useTranslation()
 
     const handleClick = (target) => {
         let offset = -100
@@ -27,7 +30,7 @@ export const Nav = () => {
                 as={'button'}
                 variant={'semibold_15'}
             >
-                About us
+                {t('nav.aboutUs')}
             </Typography>
             <Typography
                 onClick={() => handleClick('ForDrivers')}
@@ -35,7 +38,7 @@ export const Nav = () => {
                 as={'button'}
                 variant={'semibold_15'}
             >
-                For drivers
+                {t('nav.forDrivers')}
             </Typography>
             <Typography
                 onClick={() => handleClick('ForCompanies')}
@@ -43,8 +46,9 @@ export const Nav = () => {
                 as={'button'}
                 variant={'semibold_15'}
             >
-                For companies
+                {t('nav.forCompanies')}
             </Typography>
+            <LanguageSwitcher />
         </div>
     )
 }

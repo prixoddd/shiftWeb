@@ -42,9 +42,9 @@
                 gap: 16px;
                 margin-top: 20px;
 
-                button {
+                a {
                     flex: 1 1 auto;
-                    min-width: 180px;
+                    min-width: 210px;
                     max-width: 240px;
                     display: flex;
                     padding: 12px 50px;
@@ -100,6 +100,22 @@
 
 @media screen and (max-width: 1439px) and (min-width: 1024px) {
     .content {
+        .textAndAccordion {
+            .textAndButtons {
+                .buttons {
+                    flex-direction: column;
+                    align-content: center;
+                    flex-wrap: wrap;
+
+                    a {
+                        flex: 1 1 100%;
+                        width: 100%;
+                        max-width: 100%;
+                        min-width: 0;
+                    }
+                }
+            }
+        }
         .screenshots {
             width: 520px;
             height: 600px;
@@ -153,7 +169,7 @@
                     gap: 12px;
                     margin-bottom: 42px;
 
-                    button {
+                    a {
                         max-width: 100%;
                         flex: unset;
                         width: 100%;

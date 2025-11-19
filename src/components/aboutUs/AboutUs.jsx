@@ -3,9 +3,11 @@ import s from './AboutUs.module.scss'
 import { Typography } from '@/components/common/typography/Typography.jsx'
 import { Element as ScrollElement } from 'react-scroll'
 import { StatCart } from '@/components/common/statCart/StatCart.jsx'
+import { useTranslation } from 'react-i18next'
 
 export const AboutUs = () => {
     const base = import.meta.env.BASE_URL
+    const { t } = useTranslation()
     return (
         <ScrollElement name="AboutUs">
             <section className={s.hero}>
@@ -23,25 +25,15 @@ export const AboutUs = () => {
                             </div>
                             <div className={s.cartsWrapper}>
                                 <div className={s.carts}>
-                                    <StatCart count={10} text={'companies'} />
-                                    <StatCart count={100} text={'users'} />
-                                    <StatCart count={300} text={'bookings'} />
+                                    <StatCart count={10} text={t('aboutUs.stats.companies')} />
+                                    <StatCart count={100} text={t('aboutUs.stats.users')} />
+                                    <StatCart count={300} text={t('aboutUs.stats.bookings')} />
                                 </div>
                             </div>
                         </div>
                         <div className={s.textAndButton}>
-                            <Typography variant={'semibold_38'}>
-                                Built by drivers — for everyone who keeps cars moving
-                            </Typography>
-                            <Typography variant={'regular_16'}>
-                                We created Shift to save time, reduce stress, and bring order to car care. No more
-                                calls, lost records, or forgotten appointments. Drivers use our mobile app to book
-                                services, track their vehicle’s history, and share access with others. Workshops and
-                                detailing centers manage bookings, view full service history, and attach photos and
-                                invoices — all from one web platform. Whether you're behind the wheel or behind the desk
-                                — Shift keeps everything in one place. Shift was born to bring simplicity to car care
-                                for everyone involved.
-                            </Typography>
+                            <Typography variant={'semibold_38'}>{t('aboutUs.title')}</Typography>
+                            <Typography variant={'regular_16'}>{t('aboutUs.description')}</Typography>
                             {/*<Button className={s.button} variant={'secondary'}>*/}
                             {/*    <Tag />*/}
                             {/*    <Typography variant={'semibold_15'}>Find some special offers</Typography>*/}

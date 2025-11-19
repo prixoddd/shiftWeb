@@ -7,14 +7,23 @@ import { send } from '@emailjs/browser'
 
 import { toast, Toaster } from 'react-hot-toast'
 import { FallingLines } from 'react-loader-spinner'
-
-const schema = yup.object({
-    name: yup.string().required('Name is required'),
-    email: yup.string().email('Invalid email').required('Email is required'),
-    question: yup.string().trim().required('Please enter a question').max(300, 'Max 300 characters'),
-})
+import { useTranslation } from 'react-i18next'
 
 export const ContactForm = () => {
+    const { t } = useTranslation()
+
+    const schema = yup.object({
+        name: yup.string().required(t('contactUs.form.validation.nameRequired')),
+        email: yup
+            .string()
+            .email(t('contactUs.form.validation.emailInvalid'))
+            .required(t('contactUs.form.validation.emailRequired')),
+        question: yup
+            .string()
+            .trim()
+            .required(t('contactUs.form.validation.questionRequired'))
+            .max(300, t('contactUs.form.validation.questionMaxLength')),
+    })
     const {
         register,
         handleSubmit,
@@ -26,7 +35,7 @@ export const ContactForm = () => {
 
     const onSubmit = async (data) => {
         try {
-            toast.loading('Sending message...')
+            toast.loading(t('contactUs.form.sending'))
 
             await send(
                 import.meta.env.VITE_EMAILJS_SERVICE_ID,
@@ -43,10 +52,10 @@ export const ContactForm = () => {
             reset()
 
             toast.dismiss()
-            toast.success('Message sent!')
+            toast.success(t('contactUs.form.success'))
         } catch (err) {
             toast.dismiss()
-            toast.error('Something went wrong. Please try again.')
+            toast.error(t('contactUs.form.error'))
 
             console.error(err)
         }
@@ -79,11 +88,11 @@ export const ContactForm = () => {
             />
 
             <div className={s.formGroup}>
-                <label htmlFor="contact-name">Name</label>
+                <label htmlFor="contact-name">{t('contactUs.form.name')}</label>
                 <input
                     id="contact-name"
                     type="text"
-                    placeholder="Tom Bennet"
+                    placeholder={t('contactUs.form.namePlaceholder')}
                     autoComplete="name"
                     {...register('name')}
                     aria-invalid={!!errors.name}
@@ -92,11 +101,11 @@ export const ContactForm = () => {
             </div>
 
             <div className={s.formGroup}>
-                <label htmlFor="contact-email">Email</label>
+                <label htmlFor="contact-email">{t('contactUs.form.email')}</label>
                 <input
                     id="contact-email"
                     type="email"
-                    placeholder="someone@gmail.com"
+                    placeholder={t('contactUs.form.emailPlaceholder')}
                     autoComplete="email"
                     {...register('email')}
                     aria-invalid={!!errors.email}
@@ -105,11 +114,11 @@ export const ContactForm = () => {
             </div>
 
             <div className={s.formGroup}>
-                <label htmlFor="contact-question">Question</label>
+                <label htmlFor="contact-question">{t('contactUs.form.question')}</label>
                 <textarea
                     id="contact-question"
                     rows={4}
-                    placeholder="Your text"
+                    placeholder={t('contactUs.form.questionPlaceholder')}
                     {...register('question')}
                     aria-invalid={!!errors.question}
                 />
@@ -118,7 +127,7 @@ export const ContactForm = () => {
 
             <div className={s.buttonContainer}>
                 <Button variant={'primary'} type="submit" disabled={!!errors.question || isSubmitting}>
-                    Send
+                    {t('contactUs.form.send')}
                 </Button>
             </div>
         </form>

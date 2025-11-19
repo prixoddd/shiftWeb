@@ -5,8 +5,10 @@ import { ReactComponent as LogoIcon } from '@/assets/icons/logo.svg'
 import { Typography } from '@/components/common/typography/Typography.jsx'
 import { Nav } from '@/components/header/nav/Nav.jsx'
 import { BurgerNav } from '@/components/header/burgerNav/BurgerNav.jsx'
+import { useTranslation } from 'react-i18next'
 
 export const Header = () => {
+    const { t } = useTranslation()
     return (
         <section className={s.hero}>
             <div className={s.container}>
@@ -16,7 +18,7 @@ export const Header = () => {
                             <LogoIcon />
                         </a>
                         <Typography className={s.slogan} variant={'regular_14'}>
-                            Tune up your car care routine
+                            {t('header.slogan')}
                         </Typography>
                     </div>
                     <div className={s.buttons}>

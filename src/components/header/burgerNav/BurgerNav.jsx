@@ -4,9 +4,12 @@ import s from './BurgerNav.module.scss'
 import { Typography } from '@/components/common/typography/Typography.jsx'
 import { useSmoothScroll } from '@/hooks/useSmoothScroll.jsx'
 import { ReactComponent as Burger } from '@/assets/icons/burger.svg'
+import { LanguageSwitcher } from '@/components/common/languageSwitcher/LanguageSwitcher.jsx'
+import { useTranslation } from 'react-i18next'
 
 export const BurgerNav = () => {
     const { scrollTo } = useSmoothScroll()
+    const { t } = useTranslation()
     const [menuIsOpen, setMenuIsOpen] = useState(false)
 
     const onBurgerBtnClick = () => {
@@ -34,7 +37,7 @@ export const BurgerNav = () => {
                     as={'button'}
                     variant={'semibold_15'}
                 >
-                    About us
+                    {t('nav.aboutUs')}
                 </Typography>
                 <Typography
                     onClick={() => handleMenuItemClick('ForDrivers')}
@@ -42,7 +45,7 @@ export const BurgerNav = () => {
                     as={'button'}
                     variant={'semibold_15'}
                 >
-                    For drivers
+                    {t('nav.forDrivers')}
                 </Typography>
                 <Typography
                     onClick={() => handleMenuItemClick('ForCompanies')}
@@ -50,8 +53,9 @@ export const BurgerNav = () => {
                     as={'button'}
                     variant={'semibold_15'}
                 >
-                    For companies
+                    {t('nav.forCompanies')}
                 </Typography>
+                <LanguageSwitcher />
             </div>
         </nav>
     )

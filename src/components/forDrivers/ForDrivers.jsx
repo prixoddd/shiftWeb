@@ -8,34 +8,33 @@ import { ReactComponent as Appstore } from '@/assets/icons/appStore.svg'
 import { ShiftAccordion } from '@/components/accordion/Accordion.jsx'
 import { Button } from '@/components/common/button/Button.jsx'
 import { Element as ScrollElement } from 'react-scroll'
-
-const accordionItems = [
-    {
-        title: 'Appointment scheduling',
-        content:
-            'Book appointments with your preferred service center directly through the app. Enjoy the convenience of selecting dates, times, and specific services with just a few taps.',
-    },
-    {
-        title: 'Your car history',
-        content:
-            'Keep a detailed history of every service, inspection, and repair. Everything stays connected to your car automatically.',
-    },
-    {
-        title: 'All cars in one garage',
-        content: 'Manage multiple vehicles in one place. Perfect for families or small business fleets.',
-    },
-    {
-        title: 'Exclusive partner deals',
-        content: 'Access special offers and discounts from trusted service providers right inside the app.',
-    },
-    {
-        title: 'Real-time service updates',
-        content:
-            'Get instant notifications when your car is taken in and when it’s ready for pickup. Stay informed without the need for calls.',
-    },
-]
+import { useTranslation } from 'react-i18next'
 
 export const ForDrivers = () => {
+    const { t } = useTranslation()
+    const accordionItems = [
+        {
+            title: t('forDrivers.accordion.appointmentScheduling.title'),
+            content: t('forDrivers.accordion.appointmentScheduling.content'),
+        },
+        {
+            title: t('forDrivers.accordion.carHistory.title'),
+            content: t('forDrivers.accordion.carHistory.content'),
+        },
+        {
+            title: t('forDrivers.accordion.allCarsInGarage.title'),
+            content: t('forDrivers.accordion.allCarsInGarage.content'),
+        },
+        {
+            title: t('forDrivers.accordion.exclusiveDeals.title'),
+            content: t('forDrivers.accordion.exclusiveDeals.content'),
+        },
+        {
+            title: t('forDrivers.accordion.realTimeUpdates.title'),
+            content: t('forDrivers.accordion.realTimeUpdates.content'),
+        },
+    ]
+
     return (
         <ScrollElement name="ForDrivers">
             <section className={s.hero}>
@@ -43,18 +42,16 @@ export const ForDrivers = () => {
                     <div className={s.content}>
                         <div className={s.textAndAccordion}>
                             <div className={s.text}>
-                                <Typography variant={'semibold_36'}>For drivers</Typography>
+                                <Typography variant={'semibold_36'}>{t('forDrivers.title')}</Typography>
                                 <Typography variant={'regular_18'}>
-                                    Built by drivers — for drivers <br />
-                                    <br /> No more calling workshops or keeping paper service records.
+                                    {t('forDrivers.subtitle')} <br />
+                                    <br /> {t('forDrivers.description')}
                                 </Typography>
                             </div>
 
                             <ShiftAccordion items={accordionItems} />
                             <div className={s.textAndButtons}>
-                                <Typography variant={'regular_14'}>
-                                    Download Shift today and experience the future of car maintenance!
-                                </Typography>
+                                <Typography variant={'regular_14'}>{t('forDrivers.downloadText')}</Typography>
                                 <div className={s.buttons}>
                                     <Button
                                         as="a"

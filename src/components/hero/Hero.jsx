@@ -7,9 +7,11 @@ import { ReactComponent as CallRequest } from '@/assets/icons/callRequest.svg'
 import { ReactComponent as Body } from '@/assets/icons/body.svg'
 import { ReactComponent as BodyColor } from '@/assets/icons/bodyColor.svg'
 import { useSmoothScroll } from '@/hooks/useSmoothScroll.jsx'
+import { useTranslation } from 'react-i18next'
 
 export const Hero = () => {
     const { scrollTo } = useSmoothScroll()
+    const { t } = useTranslation()
 
     const handleClick = (target) => {
         let offset = -100
@@ -30,17 +32,14 @@ export const Hero = () => {
                     <div className={s.heroIntro}>
                         <div className={s.textAndButton}>
                             <Typography className={s.title} variant={'semibold_38'}>
-                                Shift — one platform for drivers and car care professionals
+                                {t('hero.title')}
                             </Typography>
                             <Typography className={s.text} variant={'regular_16'}>
-                                Book services. Manage your car. Grow your business. All in one place. Shift connects
-                                drivers and automotive businesses in one seamless system. Drivers can easily book
-                                services, track their car's history, and get real-time updates. Service providers accept
-                                bookings, document work, and keep customers happy — all through our platform.
+                                {t('hero.description')}
                             </Typography>
                             <Button className={s.orangeButton} variant={'primary'}>
                                 <Typography onClick={() => handleClick('ForDrivers')} variant={'semibold_15'}>
-                                    Try it now
+                                    {t('hero.tryItNow')}
                                 </Typography>
                             </Button>
 

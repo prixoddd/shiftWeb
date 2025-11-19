@@ -8,9 +8,11 @@ import { ReactComponent as Facebook } from '@/assets/icons/facebookLogo.svg'
 import { ReactComponent as Instagram } from '@/assets/icons/instagramLogo.svg'
 import { ReactComponent as LinkedIn } from '@/assets/icons/linkedInLogo.svg'
 import { useSmoothScroll } from '@/hooks/useSmoothScroll.jsx'
+import { useTranslation } from 'react-i18next'
 
 export const Footer = () => {
     const { scrollTo } = useSmoothScroll()
+    const { t } = useTranslation()
 
     const handleClick = (target) => {
         let offset = -100
@@ -57,12 +59,12 @@ export const Footer = () => {
                         <ul>
                             <li className={s.linksItem}>
                                 <a onClick={() => handleClick('ForDrivers')} className={s.linksLink} href="#">
-                                    For drivers
+                                    {t('footer.forDrivers')}
                                 </a>
                             </li>
                             <li className={s.linksItem}>
                                 <a onClick={() => handleClick('ForCompanies')} className={s.linksLink} href="#">
-                                    For companies
+                                    {t('footer.forCompanies')}
                                 </a>
                             </li>
                             {/*<li className={s.linksItem}>*/}
@@ -76,18 +78,18 @@ export const Footer = () => {
                         <ul className={s.linksCol}>
                             <li className={s.linksItem}>
                                 <a className={s.linksLink} href="https://shiftapp.ee/terms">
-                                    Terms&Conditions
+                                    {t('footer.terms')}
                                 </a>
                             </li>
                             <li className={s.linksItem}>
                                 <a className={s.linksLink} href="https://shiftapp.ee/privacy-policy">
-                                    Privacy policy
+                                    {t('footer.privacy')}
                                 </a>
                             </li>
                         </ul>
                     </nav>
                     <div className={s.socialsContainer}>
-                        <p>Find us on socials:</p>
+                        <p>{t('footer.findUsOnSocials')}</p>
                         <div className={s.socials}>
                             <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
                                 <Facebook />

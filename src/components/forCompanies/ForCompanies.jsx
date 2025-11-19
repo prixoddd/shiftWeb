@@ -4,27 +4,29 @@ import { Typography } from '@/components/common/typography/Typography.jsx'
 import { ShiftAccordion } from '@/components/accordion/Accordion.jsx'
 import { Button } from '@/components/common/button/Button.jsx'
 import { Element as ScrollElement } from 'react-scroll'
-
-const accordionItems = [
-    {
-        title: 'Customer management ',
-        content: 'Easily manage profiles, track service history, and view preferences — all in one dashboard.',
-    },
-    {
-        title: 'Appointment scheduling ',
-        content: 'Accept bookings online, reduce no-shows, and optimize your schedule with calendar view.',
-    },
-    {
-        title: 'Service management',
-        content: 'Maintain a comprehensive service history for each vehicle, including attached photos and invoices.',
-    },
-    {
-        title: 'Marketing tools',
-        content: 'Highlight seasonal offers, promote services, and stay in touch with loyal clients.',
-    },
-]
+import { useTranslation } from 'react-i18next'
 
 export const ForCompanies = () => {
+    const { t } = useTranslation()
+    const accordionItems = [
+        {
+            title: t('forCompanies.accordion.customerManagement.title'),
+            content: t('forCompanies.accordion.customerManagement.content'),
+        },
+        {
+            title: t('forCompanies.accordion.appointmentScheduling.title'),
+            content: t('forCompanies.accordion.appointmentScheduling.content'),
+        },
+        {
+            title: t('forCompanies.accordion.serviceManagement.title'),
+            content: t('forCompanies.accordion.serviceManagement.content'),
+        },
+        {
+            title: t('forCompanies.accordion.marketingTools.title'),
+            content: t('forCompanies.accordion.marketingTools.content'),
+        },
+    ]
+
     const base = import.meta.env.BASE_URL
     return (
         <ScrollElement name="ForCompanies">
@@ -71,19 +73,13 @@ export const ForCompanies = () => {
                         </div>
                         <div className={s.textAndAccordion}>
                             <div className={s.text}>
-                                <Typography variant={'semibold_36'}>For companies</Typography>
-                                <Typography variant={'regular_18'}>
-                                    Our web platform gives car care businesses everything they need to grow. Accept
-                                    online bookings, manage vehicle history, and build stronger customer relationships —
-                                    all in one place.
-                                </Typography>
+                                <Typography variant={'semibold_36'}>{t('forCompanies.title')}</Typography>
+                                <Typography variant={'regular_18'}>{t('forCompanies.description')}</Typography>
                             </div>
 
                             <ShiftAccordion items={accordionItems} />
                             <div className={s.textAndButtons}>
-                                <Typography variant={'regular_14'}>
-                                    Partner with Shift and grow your business with smart, simple tools.
-                                </Typography>
+                                <Typography variant={'regular_14'}>{t('forCompanies.registerText')}</Typography>
                                 <div className={s.buttons}>
                                     <Button
                                         as="a"
@@ -92,7 +88,7 @@ export const ForCompanies = () => {
                                         target="_blank"
                                         rel="noreferrer noopener"
                                     >
-                                        Register
+                                        {t('forCompanies.register')}
                                     </Button>
                                 </div>
                             </div>
