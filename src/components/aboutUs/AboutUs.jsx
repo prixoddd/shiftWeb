@@ -4,6 +4,9 @@ import { Typography } from '@/components/common/typography/Typography.jsx'
 import { Element as ScrollElement } from 'react-scroll'
 import { StatCart } from '@/components/common/statCart/StatCart.jsx'
 import { useTranslation } from 'react-i18next'
+import { ReactComponent as Office } from '@/assets/icons/office.svg'
+import { ReactComponent as People } from '@/assets/icons/people.svg'
+import { ReactComponent as Bookings } from '@/assets/icons/bookings.svg'
 
 export const AboutUs = () => {
     const base = import.meta.env.BASE_URL
@@ -25,9 +28,9 @@ export const AboutUs = () => {
                             </div>
                             <div className={s.cartsWrapper}>
                                 <div className={s.carts}>
-                                    <StatCart count={10} text={t('aboutUs.stats.companies')} />
-                                    <StatCart count={100} text={t('aboutUs.stats.users')} />
-                                    <StatCart count={300} text={t('aboutUs.stats.bookings')} />
+                                    <StatCart image={<Office />} count={10} text={t('aboutUs.stats.companies')} />
+                                    <StatCart image={<People />} count={100} text={t('aboutUs.stats.users')} />
+                                    <StatCart image={<Bookings />} count={300} text={t('aboutUs.stats.bookings')} />
                                 </div>
                             </div>
                         </div>

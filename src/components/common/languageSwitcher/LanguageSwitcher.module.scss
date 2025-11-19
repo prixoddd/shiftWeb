@@ -43,7 +43,9 @@
 .dropdown {
     position: absolute;
     top: 100%;
-    right: 0;
+    left: 50%;
+    transform: translateX(-50%);
+    //right: 0;
     margin-top: 8px;
     background: white;
     border-radius: 8px;
@@ -59,7 +61,7 @@
     background: transparent;
     border: none;
     cursor: pointer;
-    text-align: left;
+    text-align: center;
     transition: background-color 0.2s;
     color: $color-gray-main;
 

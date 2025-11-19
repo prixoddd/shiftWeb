@@ -2,23 +2,56 @@
 
 .nav {
     width: fit-content;
-
-    .button {
-        white-space: nowrap;
-
-        button:focus {
-            outline: 2px solid $color-orange;
-        }
-
-        @include button-reset;
-    }
-
     gap: 45px;
     @include flex(row, flex-end, center, nowrap);
+
     @media screen and (max-width: 1108px) {
         gap: 25px;
     }
+
     @media screen and (width < 576px) {
         display: none;
+    }
+
+    .button {
+        white-space: nowrap;
+        position: relative;
+        cursor: pointer;
+        transition:
+            color 0.25s ease,
+            transform 0.25s ease;
+
+        @include button-reset;
+
+        /* Hover effects */
+        &:hover {
+            color: darken($color-orange, 6%);
+            transform: translateY(-2px);
+        }
+
+        &:active {
+            transform: translateY(0);
+        }
+
+        /* underline animation */
+        &::after {
+            content: '';
+            position: absolute;
+            left: 0;
+            bottom: -3px;
+            width: 0%;
+            height: 2px;
+            background-color: $color-orange;
+            transition: width 0.25s ease;
+        }
+
+        &:hover::after {
+            width: 100%;
+        }
+
+        /* Focus (accessibility) */
+        button:focus {
+            outline: 2px solid $color-orange;
+        }
     }
 }

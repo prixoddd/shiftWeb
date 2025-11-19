@@ -2,20 +2,39 @@
 
 .button {
     @include button-reset;
+    transition: all 0.25s ease;
 }
 
+/* PRIMARY BUTTON */
 .primary {
     color: $color-white;
     padding: 11px 32px;
     background-color: $color-orange;
     border-radius: 100px;
     font-weight: 600;
+    transition: all 0.25s ease;
+
+    &:hover:not(:disabled) {
+        background-color: darken($color-orange, 8%);
+        transform: translateY(-1px);
+        box-shadow: 0 4px 10px rgba(0, 0, 0, 0.12);
+    }
+
+    &:active:not(:disabled) {
+        transform: translateY(0);
+        box-shadow: none;
+    }
+
     &:disabled {
         background: $color-gray-border-primary;
         color: $color-gray-main;
+        cursor: not-allowed;
+        box-shadow: none;
+        transform: none;
     }
 }
 
+/* SECONDARY BUTTON */
 .secondary {
     color: $color-gray-border-primary;
     background-color: $color-white;
@@ -23,8 +42,26 @@
     border-radius: 8px;
     padding: 9px 16px;
     box-sizing: border-box;
+    transition: all 0.25s ease;
+
+    &:hover:not(:disabled) {
+        border-color: darken($color-gray-border-primary, 10%);
+        background-color: lighten($color-gray-border-primary, 38%);
+        transform: translateY(-1px);
+    }
+
+    &:active:not(:disabled) {
+        transform: translateY(0);
+    }
+
+    &:disabled {
+        opacity: 0.6;
+        cursor: not-allowed;
+        transform: none;
+    }
 }
 
+/* LOGO BUTTON */
 .logo {
     background-color: $color-gray-main;
     padding: 8px 58px;
@@ -33,4 +70,14 @@
     display: flex;
     align-items: center;
     justify-content: center;
+    transition: all 0.25s ease;
+
+    &:hover {
+        background-color: darken($color-gray-main, 10%);
+        transform: translateY(-1px);
+    }
+
+    &:active {
+        transform: translateY(0);
+    }
 }
