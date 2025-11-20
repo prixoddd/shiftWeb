@@ -5,11 +5,18 @@ import 'aos/dist/aos.css'
 
 export const AosProvider = ({ children }) => {
     useEffect(() => {
+        const isMobile =
+            typeof window !== 'undefined' && window.matchMedia && window.matchMedia('(max-width: 768px)').matches
+
         AOS.init({
-            duration: 1000, // длительность анимации
-            easing: 'ease-out', // кривая
-            once: true, // анимация только 1 раз
-            offset: 80, // отступ от низа экрана
+            duration: 500,
+            easing: 'ease-out',
+            offset: 80,
+            once: true,
+            disable: isMobile,
+            debounceDelay: 50,
+            throttleDelay: 50,
+            disableMutationObserver: true,
         })
     }, [])
 
