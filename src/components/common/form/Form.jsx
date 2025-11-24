@@ -122,7 +122,7 @@ export const ContactForm = () => {
                 {errors.question && <span className={s.error}>{errors.question.message}</span>}
             </div>
 
-            <div className={s.buttonContainer} data-aos="zoom-in" data-aos-duration="600" data-aos-delay="400">
+            <div className={s.buttonContainer} data-aos="zoom-in-left" data-aos-duration="600" data-aos-delay="400">
                 <Button variant={'primary'} type="submit" disabled={!!errors.question || isSubmitting}>
                     {t('contactUs.form.send')}
                 </Button>

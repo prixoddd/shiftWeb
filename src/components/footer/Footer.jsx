@@ -4,7 +4,6 @@ import { ReactComponent as LogoIcon } from '@/assets/icons/logoLarge.svg'
 import { ReactComponent as GooglePlay } from '@/assets/icons/googlePlay.svg'
 import { ReactComponent as Appstore } from '@/assets/icons/appStore.svg'
 import { Button } from '@/components/common/button/Button.jsx'
-import { ReactComponent as Facebook } from '@/assets/icons/facebookLogo.svg'
 import { ReactComponent as Instagram } from '@/assets/icons/instagramLogo.svg'
 import { ReactComponent as LinkedIn } from '@/assets/icons/linkedInLogo.svg'
 import { useSmoothScroll } from '@/hooks/useSmoothScroll.jsx'
@@ -91,9 +90,9 @@ export const Footer = () => {
                     <div className={s.socialsContainer}>
                         <p>{t('footer.findUsOnSocials')}</p>
                         <div className={s.socials}>
-                            <a href="https://facebook.com" target="_blank" rel="noopener noreferrer">
-                                <Facebook />
-                            </a>
+                            {/*<a href="https://facebook.com" target="_blank" rel="noopener noreferrer">*/}
+                            {/*    <Facebook />*/}
+                            {/*</a>*/}
                             <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
                                 <Instagram />
                             </a>

@@ -17,8 +17,13 @@
     background-color: $color-white;
     border-radius: 16px;
 
+    .buttonWrapper {
+        width: 100%;
+    }
+
     .heroIntro {
         flex: 1 1 50%;
+        min-height: 436px;
         max-width: 712px;
         border-radius: 16px 50px 50px 16px;
         z-index: 2;
