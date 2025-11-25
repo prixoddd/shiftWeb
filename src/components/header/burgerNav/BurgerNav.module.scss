@@ -115,11 +115,11 @@
         top: 0;
         right: 0;
         width: 75vw;
-        max-width: 360px;
+        max-width: 300px;
         height: 100vh;
         backdrop-filter: blur(16px);
         background: rgba($color-white, 0.85);
-        //box-shadow: -4px 0 20px rgba($color-gray-main, 0.12);
+        box-shadow: -4px 0 180px rgba($color-gray-main, 0.8);
         border-left: 1px solid rgba($color-gray-content-tertiary, 0.3);
         border-top-left-radius: 20px;
         border-bottom-left-radius: 20px;
