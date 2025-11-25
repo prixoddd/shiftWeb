@@ -1,119 +1,122 @@
 {
-    "header": {
-        "slogan": "Tune up your car care routine"
-    },
-    "nav": {
-        "aboutUs": "About us",
-        "forDrivers": "For drivers",
-        "forCompanies": "For companies"
-    },
-    "hero": {
-        "title": "Shift — one platform for drivers and car care professionals",
-        "description": "Book services. Manage your car. Grow your business. All in one place. Shift connects drivers and automotive businesses in one seamless system. Drivers can easily book services, track their car's history, and get real-time updates. Service providers accept bookings, document work, and keep customers happy — all through our platform.",
-        "tryItNow": "Try it now"
-    },
-    "mail": {
-        "greeting": "Hi {{name}},",
-        "intro": "We've received your message:",
-        "footer": "We'll get back to you as soon as possible, usually within 3 business days.",
-        "signatureLine1": "Best regards,",
-        "signatureLine2": "The Shift Team"
-    },
-    "aboutUs": {
-        "title": "Built by drivers — for everyone who keeps cars moving",
-        "description": "We created Shift to save time, reduce stress, and bring order to car care. No more calls, lost records, or forgotten appointments. Drivers use our mobile app to book services, track their vehicle's history, and share access with others. Workshops and detailing centers manage bookings, view full service history, and attach photos and invoices — all from one web platform. Whether you're behind the wheel or behind the desk — Shift keeps everything in one place. Shift was born to bring simplicity to car care for everyone involved.",
-        "stats": {
-            "companies": "companies",
-            "users": "users",
-            "bookings": "bookings"
-        }
-    },
-    "forDrivers": {
-        "title": "For drivers",
-        "subtitle": "Built by drivers — for drivers",
-        "description": "No more calling workshops or keeping paper service records.",
-        "downloadText": "Download Shift today and experience the future of car maintenance!",
-        "accordion": {
-            "appointmentScheduling": {
-                "title": "Appointment scheduling",
-                "content": "Book appointments with your preferred service center directly through the app. Enjoy the convenience of selecting dates, times, and specific services with just a few taps."
-            },
-            "carHistory": {
-                "title": "Your car history",
-                "content": "Keep a detailed history of every service, inspection, and repair. Everything stays connected to your car automatically."
-            },
-            "allCarsInGarage": {
-                "title": "All cars in one garage",
-                "content": "Manage multiple vehicles in one place. Perfect for families or small business fleets."
-            },
-            "exclusiveDeals": {
-                "title": "Exclusive partner deals",
-                "content": "Access special offers and discounts from trusted service providers right inside the app."
-            },
-            "realTimeUpdates": {
-                "title": "Real-time service updates",
-                "content": "Get instant notifications when your car is taken in and when it's ready for pickup. Stay informed without the need for calls."
-            }
-        }
-    },
-    "forCompanies": {
-        "title": "For companies",
-        "description": "Our web platform gives car care businesses everything they need to grow. Accept online bookings, manage vehicle history, and build stronger customer relationships — all in one place.",
-        "registerText": "Partner with Shift and grow your business with smart, simple tools.",
-        "register": "Register",
-        "accordion": {
-            "customerManagement": {
-                "title": "Customer management ",
-                "content": "Easily manage profiles, track service history, and view preferences — all in one dashboard."
-            },
-            "appointmentScheduling": {
-                "title": "Appointment scheduling ",
-                "content": "Accept bookings online, reduce no-shows, and optimize your schedule with calendar view."
-            },
-            "serviceManagement": {
-                "title": "Service management",
-                "content": "Maintain a comprehensive service history for each vehicle, including attached photos and invoices."
-            },
-            "marketingTools": {
-                "title": "Marketing tools",
-                "content": "Highlight seasonal offers, promote services, and stay in touch with loyal clients."
-            }
-        }
-    },
-    "contactUs": {
-        "title": "Got a question? We're here",
-        "description": "Whether you're a driver, a service provider, or just curious about Shift, we'd love to hear from you. Need help, want a demo, or looking to partner with us? Fill out the form and we'll get back to you shortly.",
-        "form": {
-            "name": "Name",
-            "email": "Email",
-            "question": "Question",
-            "namePlaceholder": "Tom Bennet",
-            "emailPlaceholder": "someone@gmail.com",
-            "questionPlaceholder": "Your text",
-            "send": "Send",
-            "sending": "Sending message...",
-            "success": "Message sent!",
-            "error": "Something went wrong. Please try again.",
-            "validation": {
-                "nameRequired": "Name is required",
-                "emailRequired": "Email is required",
-                "emailInvalid": "Invalid email",
-                "questionRequired": "Please enter a question",
-                "questionMaxLength": "Max 300 characters"
-            }
-        }
-    },
-    "footer": {
-        "copyright": "© 2022. All rights reserved",
-        "forDrivers": "For drivers",
-        "forCompanies": "For companies",
-        "terms": "Terms&Conditions",
-        "privacy": "Privacy policy",
-        "findUsOnSocials": "Find us on socials:"
-    },
-    "language": {
-        "en": "English",
-        "ru": "Русский",
-        "et": "Eesti"
+  "header": {
+    "slogan": "Tune up your car care routine"
+  },
+  "common": {
+    "comingSoon": "Coming soon"
+  },
+  "nav": {
+    "aboutUs": "About us",
+    "forDrivers": "For drivers",
+    "forCompanies": "For companies"
+  },
+  "hero": {
+    "title": "Shift — one platform for drivers and car care professionals",
+    "description": "Book services. Manage your car. Grow your business. All in one place. Shift connects drivers and automotive businesses in one seamless system. Drivers can easily book services, track their car's history, and get real-time updates. Service providers accept bookings, document work, and keep customers happy — all through our platform.",
+    "tryItNow": "Try it now"
+  },
+  "mail": {
+    "greeting": "Hi {{name}},",
+    "intro": "We've received your message:",
+    "footer": "We'll get back to you as soon as possible, usually within 3 business days.",
+    "signatureLine1": "Best regards,",
+    "signatureLine2": "The Shift Team"
+  },
+  "aboutUs": {
+    "title": "Built by drivers — for everyone who keeps cars moving",
+    "description": "We created Shift to save time, reduce stress, and bring order to car care. No more calls, lost records, or forgotten appointments. Drivers use our mobile app to book services, track their vehicle's history, and share access with others. Workshops and detailing centers manage bookings, view full service history, and attach photos and invoices — all from one web platform. Whether you're behind the wheel or behind the desk — Shift keeps everything in one place. Shift was born to bring simplicity to car care for everyone involved.",
+    "stats": {
+      "companies": "companies",
+      "users": "users",
+      "bookings": "bookings"
     }
+  },
+  "forDrivers": {
+    "title": "For drivers",
+    "subtitle": "Built by drivers — for drivers",
+    "description": "No more calling workshops or keeping paper service records.",
+    "downloadText": "Download Shift today and experience the future of car maintenance!",
+    "accordion": {
+      "appointmentScheduling": {
+        "title": "Appointment scheduling",
+        "content": "Book appointments with your preferred service center directly through the app. Enjoy the convenience of selecting dates, times, and specific services with just a few taps."
+      },
+      "carHistory": {
+        "title": "Your car history",
+        "content": "Keep a detailed history of every service, inspection, and repair. Everything stays connected to your car automatically."
+      },
+      "allCarsInGarage": {
+        "title": "All cars in one garage",
+        "content": "Manage multiple vehicles in one place. Perfect for families or small business fleets."
+      },
+      "exclusiveDeals": {
+        "title": "Exclusive partner deals",
+        "content": "Access special offers and discounts from trusted service providers right inside the app."
+      },
+      "realTimeUpdates": {
+        "title": "Real-time service updates",
+        "content": "Get instant notifications when your car is taken in and when it's ready for pickup. Stay informed without the need for calls."
+      }
+    }
+  },
+  "forCompanies": {
+    "title": "For companies",
+    "description": "Our web platform gives car care businesses everything they need to grow. Accept online bookings, manage vehicle history, and build stronger customer relationships — all in one place.",
+    "registerText": "Partner with Shift and grow your business with smart, simple tools.",
+    "register": "Register",
+    "accordion": {
+      "customerManagement": {
+        "title": "Customer management ",
+        "content": "Easily manage profiles, track service history, and view preferences — all in one dashboard."
+      },
+      "appointmentScheduling": {
+        "title": "Appointment scheduling ",
+        "content": "Accept bookings online, reduce no-shows, and optimize your schedule with calendar view."
+      },
+      "serviceManagement": {
+        "title": "Service management",
+        "content": "Maintain a comprehensive service history for each vehicle, including attached photos and invoices."
+      },
+      "marketingTools": {
+        "title": "Marketing tools",
+        "content": "Highlight seasonal offers, promote services, and stay in touch with loyal clients."
+      }
+    }
+  },
+  "contactUs": {
+    "title": "Got a question? We're here",
+    "description": "Whether you're a driver, a service provider, or just curious about Shift, we'd love to hear from you. Need help, want a demo, or looking to partner with us? Fill out the form and we'll get back to you shortly.",
+    "form": {
+      "name": "Name",
+      "email": "Email",
+      "question": "Question",
+      "namePlaceholder": "Tom Bennet",
+      "emailPlaceholder": "someone@gmail.com",
+      "questionPlaceholder": "Your text",
+      "send": "Send",
+      "sending": "Sending message...",
+      "success": "Message sent!",
+      "error": "Something went wrong. Please try again.",
+      "validation": {
+        "nameRequired": "Name is required",
+        "emailRequired": "Email is required",
+        "emailInvalid": "Invalid email",
+        "questionRequired": "Please enter a question",
+        "questionMaxLength": "Max 300 characters"
+      }
+    }
+  },
+  "footer": {
+    "copyright": "© 2022. All rights reserved",
+    "forDrivers": "For drivers",
+    "forCompanies": "For companies",
+    "terms": "Terms&Conditions",
+    "privacy": "Privacy policy",
+    "findUsOnSocials": "Find us on socials:"
+  },
+  "language": {
+    "en": "English",
+    "ru": "Русский",
+    "et": "Eesti"
+  }
 }

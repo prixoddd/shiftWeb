@@ -92,12 +92,29 @@ export const Footer = () => {
                         <div className={s.socials}>
                             {/*<a href="https://facebook.com" target="_blank" rel="noopener noreferrer">*/}
                             {/*    <Facebook />*/}
+                            {/*    <span className={s.tooltip}>Coming soon</span>*/}
                             {/*</a>*/}
-                            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">
+                            <a
+                                href="https://instagram.com"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className={s.socialLink}
+                                data-soon
+                                onClick={(e) => e.preventDefault()}
+                            >
                                 <Instagram />
+                                <span className={s.tooltip}>{t('common.comingSoon')}</span>
                             </a>
-                            <a href="https://linkedin.com" target="_blank" rel="noopener noreferrer">
+                            <a
+                                href="https://linkedin.com"
+                                target="_blank"
+                                rel="noopener noreferrer"
+                                className={s.socialLink}
+                                data-soon
+                                onClick={(e) => e.preventDefault()}
+                            >
                                 <LinkedIn />
+                                <span className={s.tooltip}>{t('common.comingSoon')}</span>
                             </a>
                         </div>
                     </div>

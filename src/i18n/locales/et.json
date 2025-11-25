@@ -1,119 +1,122 @@
 {
-    "header": {
-        "slogan": "Muuda auto hooldus lihtsamaks"
-    },
-    "nav": {
-        "aboutUs": "Meist",
-        "forDrivers": "Juhtidele",
-        "forCompanies": "Ettevõtetele"
-    },
-    "hero": {
-        "title": "Shift — üks platvorm juhtidele ja autohoolduse spetsialistidele",
-        "description": "Broneeri teenuseid. Halda oma autot. Arenda äri. Kõik ühes kohas. Shift ühendab juhid ja autoteenindused ühtsesse süsteemi. Juhid saavad mugavalt broneerida teenuseid, jälgida auto ajalugu ja saada teavitusi reaalajas. Teenindused võtavad broneeringuid vastu, dokumenteerivad tööd ja hoiavad kliendid rahul — kõik ühe platvormi kaudu.",
-        "tryItNow": "Proovi kohe"
-    },
-    "aboutUs": {
-        "title": "Loodud juhtide poolt — kõigile, kes hoiavad autod liikumas",
-        "description": "Lõime Shifti, et säästa aega, vähendada stressi ja tuua autohooldusse korda. Ei mingeid telefonikõnesid, kadunud märkmikke ega unustatud aegu. Juhid kasutavad meie rakendust teenuste broneerimiseks, auto ajaloo jälgimiseks ja ligipääsu jagamiseks. Töökojad ja detailingu keskused haldavad broneeringuid, näevad täielikku ajalugu ning lisavad fotosid ja arveid — kõik ühest veebiplatvormist. Shift sündis selleks, et muuta autohooldus kõigi jaoks lihtsamaks.",
-        "stats": {
-            "companies": "ettevõtet",
-            "users": "kasutajat",
-            "bookings": "broneeringut"
-        }
-    },
-    "mail": {
-        "greeting": "Tere, {{name}}",
-        "intro": "Oleme teie sõnumi kätte saanud:",
-        "footer": "Vastame teile esimesel võimalusel, tavaliselt 3 tööpäeva jooksul.",
-        "signatureLine1": "Lugupidamisega,",
-        "signatureLine2": "Shift tiim"
-    },
-    "forDrivers": {
-        "title": "Juhtidele",
-        "subtitle": "Loodud juhtide poolt — juhtidele",
-        "description": "Pole enam vajadust helistada teenindustesse või hoida paberkandjal hooldusajalugu.",
-        "downloadText": "Laadi Shift alla ja koge autohoolduse tulevikku juba täna!",
-        "accordion": {
-            "appointmentScheduling": {
-                "title": "Aja broneerimine",
-                "content": "Broneeri aeg oma eelistatud teeninduses otse rakenduse kaudu. Vali sobiv kuupäev, kellaaeg ja teenused vaid mõne puudutusega."
-            },
-            "carHistory": {
-                "title": "Sinu auto ajalugu",
-                "content": "Põhjalik ülevaade kõigist teenustest, kontrollidest ja remontidest. Kõik on automaatselt seotud sinu autoga."
-            },
-            "allCarsInGarage": {
-                "title": "Kõik autod ühes garaažis",
-                "content": "Halda mitut autot korraga — ideaalne peredele ja väikestele autoparkidele."
-            },
-            "exclusiveDeals": {
-                "title": "Eksklusiivsed pakkumised",
-                "content": "Ligipääs partnerite eripakkumistele ja soodustustele otse rakenduses."
-            },
-            "realTimeUpdates": {
-                "title": "Reaalajas teavitused",
-                "content": "Saa teavitusi, kui sinu auto võetakse töösse ja kui see on valmis. Ilma kõnedeta ja ootamiseta."
-            }
-        }
-    },
-    "forCompanies": {
-        "title": "Ettevõtetele",
-        "description": "Meie veebiplatvorm annab autoteenindustele kõik vahendid äri kasvatamiseks. Võtke vastu broneeringuid, haldage auto ajalugu ja looge tugevamad kliendisuhted — kõik ühes kohas.",
-        "registerText": "Liituge Shiftiga ja kasvatage oma äri nutikate ja lihtsate tööriistadega.",
-        "register": "Registreeru",
-        "accordion": {
-            "customerManagement": {
-                "title": "Kliendihaldus",
-                "content": "Haldage profiile, teenindusajalugu ja kliendi eelistusi ühest mugavast töölauast."
-            },
-            "appointmentScheduling": {
-                "title": "Aja broneerimine",
-                "content": "Võtke vastu veebibroneeringuid, vähendage mitteilmumisi ja optimeerige graafikut."
-            },
-            "serviceManagement": {
-                "title": "Teenuste haldus",
-                "content": "Hoidke iga auto kohta täielikku teenindusajalugu koos fotode ja arvete lisamise võimalusega."
-            },
-            "marketingTools": {
-                "title": "Turundustööriistad",
-                "content": "Tõstke esile hooajalisi pakkumisi, reklaamige teenuseid ja hoidke ühendust püsiklientidega."
-            }
-        }
-    },
-    "contactUs": {
-        "title": "Küsimus? Võta meiega ühendust",
-        "description": "Oled juht, teenusepakkuja või lihtsalt huvitatud Shiftist? Meil on hea meel aidata. Soovid abi, demo või koostööd? Täida vorm ja võtame sinuga peagi ühendust.",
-        "form": {
-            "name": "Nimi",
-            "email": "Email",
-            "question": "Küsimus",
-            "namePlaceholder": "Jaan Tamm",
-            "emailPlaceholder": "someone@gmail.com",
-            "questionPlaceholder": "Sinu tekst",
-            "send": "Saada",
-            "sending": "Saadan...",
-            "success": "Sõnum saadetud!",
-            "error": "Midagi läks valesti. Palun proovi uuesti.",
-            "validation": {
-                "nameRequired": "Nimi on kohustuslik",
-                "emailRequired": "Email on kohustuslik",
-                "emailInvalid": "Email ei ole korrektne",
-                "questionRequired": "Palun sisesta küsimus",
-                "questionMaxLength": "Maksimaalselt 300 tähemärki"
-            }
-        }
-    },
-    "footer": {
-        "copyright": "© 2022. Kõik õigused kaitstud",
-        "forDrivers": "Juhtidele",
-        "forCompanies": "Ettevõtetele",
-        "terms": "Tingimused",
-        "privacy": "Privaatsuspoliitika",
-        "findUsOnSocials": "Leia meid sotsiaalmeedias:"
-    },
-    "language": {
-        "en": "English",
-        "ru": "Русский",
-        "et": "Eesti"
+  "header": {
+    "slogan": "Muuda auto hooldus lihtsamaks"
+  },
+  "common": {
+    "comingSoon": "Varsti saadaval"
+  },
+  "nav": {
+    "aboutUs": "Meist",
+    "forDrivers": "Juhtidele",
+    "forCompanies": "Ettevõtetele"
+  },
+  "hero": {
+    "title": "Shift — üks platvorm juhtidele ja autohoolduse spetsialistidele",
+    "description": "Broneeri teenuseid. Halda oma autot. Arenda äri. Kõik ühes kohas. Shift ühendab juhid ja autoteenindused ühtsesse süsteemi. Juhid saavad mugavalt broneerida teenuseid, jälgida auto ajalugu ja saada teavitusi reaalajas. Teenindused võtavad broneeringuid vastu, dokumenteerivad tööd ja hoiavad kliendid rahul — kõik ühe platvormi kaudu.",
+    "tryItNow": "Proovi kohe"
+  },
+  "aboutUs": {
+    "title": "Loodud juhtide poolt — kõigile, kes hoiavad autod liikumas",
+    "description": "Lõime Shifti, et säästa aega, vähendada stressi ja tuua autohooldusse korda. Ei mingeid telefonikõnesid, kadunud märkmikke ega unustatud aegu. Juhid kasutavad meie rakendust teenuste broneerimiseks, auto ajaloo jälgimiseks ja ligipääsu jagamiseks. Töökojad ja detailingu keskused haldavad broneeringuid, näevad täielikku ajalugu ning lisavad fotosid ja arveid — kõik ühest veebiplatvormist. Shift sündis selleks, et muuta autohooldus kõigi jaoks lihtsamaks.",
+    "stats": {
+      "companies": "ettevõtet",
+      "users": "kasutajat",
+      "bookings": "broneeringut"
     }
+  },
+  "mail": {
+    "greeting": "Tere, {{name}}",
+    "intro": "Oleme teie sõnumi kätte saanud:",
+    "footer": "Vastame teile esimesel võimalusel, tavaliselt 3 tööpäeva jooksul.",
+    "signatureLine1": "Lugupidamisega,",
+    "signatureLine2": "Shift tiim"
+  },
+  "forDrivers": {
+    "title": "Juhtidele",
+    "subtitle": "Loodud juhtide poolt — juhtidele",
+    "description": "Pole enam vajadust helistada teenindustesse või hoida paberkandjal hooldusajalugu.",
+    "downloadText": "Laadi Shift alla ja koge autohoolduse tulevikku juba täna!",
+    "accordion": {
+      "appointmentScheduling": {
+        "title": "Aja broneerimine",
+        "content": "Broneeri aeg oma eelistatud teeninduses otse rakenduse kaudu. Vali sobiv kuupäev, kellaaeg ja teenused vaid mõne puudutusega."
+      },
+      "carHistory": {
+        "title": "Sinu auto ajalugu",
+        "content": "Põhjalik ülevaade kõigist teenustest, kontrollidest ja remontidest. Kõik on automaatselt seotud sinu autoga."
+      },
+      "allCarsInGarage": {
+        "title": "Kõik autod ühes garaažis",
+        "content": "Halda mitut autot korraga — ideaalne peredele ja väikestele autoparkidele."
+      },
+      "exclusiveDeals": {
+        "title": "Eksklusiivsed pakkumised",
+        "content": "Ligipääs partnerite eripakkumistele ja soodustustele otse rakenduses."
+      },
+      "realTimeUpdates": {
+        "title": "Reaalajas teavitused",
+        "content": "Saa teavitusi, kui sinu auto võetakse töösse ja kui see on valmis. Ilma kõnedeta ja ootamiseta."
+      }
+    }
+  },
+  "forCompanies": {
+    "title": "Ettevõtetele",
+    "description": "Meie veebiplatvorm annab autoteenindustele kõik vahendid äri kasvatamiseks. Võtke vastu broneeringuid, haldage auto ajalugu ja looge tugevamad kliendisuhted — kõik ühes kohas.",
+    "registerText": "Liituge Shiftiga ja kasvatage oma äri nutikate ja lihtsate tööriistadega.",
+    "register": "Registreeru",
+    "accordion": {
+      "customerManagement": {
+        "title": "Kliendihaldus",
+        "content": "Haldage profiile, teenindusajalugu ja kliendi eelistusi ühest mugavast töölauast."
+      },
+      "appointmentScheduling": {
+        "title": "Aja broneerimine",
+        "content": "Võtke vastu veebibroneeringuid, vähendage mitteilmumisi ja optimeerige graafikut."
+      },
+      "serviceManagement": {
+        "title": "Teenuste haldus",
+        "content": "Hoidke iga auto kohta täielikku teenindusajalugu koos fotode ja arvete lisamise võimalusega."
+      },
+      "marketingTools": {
+        "title": "Turundustööriistad",
+        "content": "Tõstke esile hooajalisi pakkumisi, reklaamige teenuseid ja hoidke ühendust püsiklientidega."
+      }
+    }
+  },
+  "contactUs": {
+    "title": "Küsimus? Võta meiega ühendust",
+    "description": "Oled juht, teenusepakkuja või lihtsalt huvitatud Shiftist? Meil on hea meel aidata. Soovid abi, demo või koostööd? Täida vorm ja võtame sinuga peagi ühendust.",
+    "form": {
+      "name": "Nimi",
+      "email": "Email",
+      "question": "Küsimus",
+      "namePlaceholder": "Jaan Tamm",
+      "emailPlaceholder": "someone@gmail.com",
+      "questionPlaceholder": "Sinu tekst",
+      "send": "Saada",
+      "sending": "Saadan...",
+      "success": "Sõnum saadetud!",
+      "error": "Midagi läks valesti. Palun proovi uuesti.",
+      "validation": {
+        "nameRequired": "Nimi on kohustuslik",
+        "emailRequired": "Email on kohustuslik",
+        "emailInvalid": "Email ei ole korrektne",
+        "questionRequired": "Palun sisesta küsimus",
+        "questionMaxLength": "Maksimaalselt 300 tähemärki"
+      }
+    }
+  },
+  "footer": {
+    "copyright": "© 2022. Kõik õigused kaitstud",
+    "forDrivers": "Juhtidele",
+    "forCompanies": "Ettevõtetele",
+    "terms": "Tingimused",
+    "privacy": "Privaatsuspoliitika",
+    "findUsOnSocials": "Leia meid sotsiaalmeedias:"
+  },
+  "language": {
+    "en": "English",
+    "ru": "Русский",
+    "et": "Eesti"
+  }
 }
