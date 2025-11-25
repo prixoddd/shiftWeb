@@ -61,6 +61,7 @@
 .Trigger {
     all: unset;
     outline: none;
+    -webkit-tap-highlight-color: transparent;
     font-family: inherit;
     font-size: 18px;
     font-weight: 600;
@@ -81,9 +82,9 @@
         padding: 16px 16px;
     }
 
-    //&:hover {
-    //    background-color: rgba($color-gray-background, 0.6);
-    //}
+    &:hover {
+        background-color: rgba($color-gray-background, 0.6);
+    }
 }
 
 .Trigger:focus {
