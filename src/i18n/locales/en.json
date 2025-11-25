@@ -12,6 +12,13 @@
         "description": "Book services. Manage your car. Grow your business. All in one place. Shift connects drivers and automotive businesses in one seamless system. Drivers can easily book services, track their car's history, and get real-time updates. Service providers accept bookings, document work, and keep customers happy — all through our platform.",
         "tryItNow": "Try it now"
     },
+    "mail": {
+        "greeting": "Hi {{name}},",
+        "intro": "We've received your message:",
+        "footer": "We'll get back to you as soon as possible, usually within 3 business days.",
+        "signatureLine1": "Best regards,",
+        "signatureLine2": "The Shift Team"
+    },
     "aboutUs": {
         "title": "Built by drivers — for everyone who keeps cars moving",
         "description": "We created Shift to save time, reduce stress, and bring order to car care. No more calls, lost records, or forgotten appointments. Drivers use our mobile app to book services, track their vehicle's history, and share access with others. Workshops and detailing centers manage bookings, view full service history, and attach photos and invoices — all from one web platform. Whether you're behind the wheel or behind the desk — Shift keeps everything in one place. Shift was born to bring simplicity to car care for everyone involved.",

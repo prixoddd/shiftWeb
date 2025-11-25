@@ -3,7 +3,6 @@ import React, { useState } from 'react'
 import s from './BurgerNav.module.scss'
 import { Typography } from '@/components/common/typography/Typography.jsx'
 import { useSmoothScroll } from '@/hooks/useSmoothScroll.jsx'
-import { ReactComponent as Burger } from '@/assets/icons/burger.svg'
 import { LanguageSwitcher } from '@/components/common/languageSwitcher/LanguageSwitcher.jsx'
 import { useTranslation } from 'react-i18next'
 
@@ -27,7 +26,11 @@ export const BurgerNav = () => {
                 className={menuIsOpen ? `${s.burgerIconWrapper} ${s.open}` : s.burgerIconWrapper}
                 onClick={onBurgerBtnClick}
             >
-                <Burger className={s.burgerIcon} />
+                <div className={s.burgerIcon}>
+                    <span />
+                    <span />
+                    <span />
+                </div>
             </div>
 
             <div className={menuIsOpen ? `${s.burgerNavItems} ${s.show}` : s.burgerNavItems}>

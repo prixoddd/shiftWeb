@@ -21,6 +21,13 @@
             "bookings": "broneeringut"
         }
     },
+    "mail": {
+        "greeting": "Tere, {{name}}",
+        "intro": "Oleme teie sõnumi kätte saanud:",
+        "footer": "Vastame teile esimesel võimalusel, tavaliselt 3 tööpäeva jooksul.",
+        "signatureLine1": "Lugupidamisega,",
+        "signatureLine2": "Shift tiim"
+    },
     "forDrivers": {
         "title": "Juhtidele",
         "subtitle": "Loodud juhtide poolt — juhtidele",

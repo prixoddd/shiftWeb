@@ -41,9 +41,13 @@ export const ContactForm = () => {
                 import.meta.env.VITE_EMAILJS_SERVICE_ID,
                 import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
                 {
-                    from_name: data.name,
                     from_email: data.email,
+                    greeting: t('mail.greeting', { name: data.name }),
+                    intro: t('mail.intro'),
                     message: data.question,
+                    footer: t('mail.footer'),
+                    signatureLine1: t('mail.signatureLine1'),
+                    signatureLine2: t('mail.signatureLine2'),
                 },
                 {
                     publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
